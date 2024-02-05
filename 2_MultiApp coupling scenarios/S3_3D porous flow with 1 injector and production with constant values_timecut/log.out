@@ -1,0 +1,5832 @@
+mpirun --bind-to core --map-by core /home/kit/agw/qz9211/projects/moose/modules/porous_flow/porous_flow-opt -i /pfs/data5/home/kit/agw/qz9211/results/5_Heat_storage/2_coupling/3_result/1_fixedP/2_moose_mesh/1_300m_cubic/0_closedBC/2_1.5d_cut/1e-8/inj_res/2h/reservoir.i
+Setting Up[36mpipe_mw0: [39m[36mThe following total 5 aux variables:
+[36mpipe_mw0: [36m  total_thermal_resistivity
+[36mpipe_mw0: [36m  well_P
+[36mpipe_mw0: [36m  well_T
+[36mpipe_mw0: [36m  well_q
+[36mpipe_mw0: [36m  well_velocity
+[36mpipe_mw0: [36mare added for automatic output by MaterialOutputAction.[39m
+
+  Initializing
+    Finished Initializing Equation Systems                                               [[33m  5.90 s[39m] [[33m  122 MB[39m]
+  Finished Initializing                                                                  [[33m  5.97 s[39m] [[33m  122 MB[39m]
+Finished Setting Up                                                                      [[33m 15.74 s[39m] [[33m  122 MB[39m]
+
+Framework Information:
+MOOSE Version:           git commit 2d9ac4d977 on 2023-03-29
+LibMesh Version:         
+PETSc Version:           3.16.6
+SLEPc Version:           3.16.2
+Current Time:            Sun Feb  4 09:56:01 2024
+Executable Timestamp:    Tue Jan 30 13:49:57 2024
+
+Parallelism:
+  Num Processors:          320
+  Num Threads:             1
+
+Mesh: 
+  Parallel Type:           replicated
+  Mesh Dimension:          3
+  Spatial Dimension:       3
+  Nodes:                   
+    Total:                 25600
+    Local:                 156
+    Min/Max/Avg:           25/160/80
+  Elems:                   
+    Total:                 23064
+    Local:                 72
+    Min/Max/Avg:           70/74/72
+  Num Subdomains:          5
+  Num Partitions:          320
+  Partitioner:             metis
+
+Nonlinear System:
+  Num DOFs:                51200
+  Num Local DOFs:          312
+  Variables:               { "porepressure" "temperature" } 
+  Finite Element Types:    "LAGRANGE" 
+  Approximation Orders:    "FIRST" 
+
+Auxiliary System:
+  Num DOFs:                550760
+  Num Local DOFs:          2328
+  Variables:               { "velocity_x" "velocity_y" "velocity_z" } { "density" "viscosity" "enthalpy" 
+                             } { "pp_mw_well" "rho_mw_well" "mu_mw_well" "h_mw_well" "pp_sw_well" "rho_sw_well" 
+                             "mu_sw_well" "h_sw_well" } 
+  Finite Element Types:    "MONOMIAL" "MONOMIAL" "LAGRANGE" 
+  Approximation Orders:    "CONSTANT" "FIRST" "FIRST" 
+
+Execution Information:
+  Executioner:             Transient
+  TimeStepper:             IterationAdaptiveDT
+  TimeIntegrator:          ImplicitEuler
+  Solver Mode:             NEWTON
+  PETSc Preconditioner:    hypre boomeramg strong_threshold: 0.7 (auto)
+  MOOSE Preconditioner:    SMP
+
+
+[36mpipe_mw0: [39mParallelism:
+[36mpipe_mw0: [39m  Num Processors:          1
+[36mpipe_mw0: [39m  Num Threads:             1
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mMesh: 
+[36mpipe_mw0: [39m  Parallel Type:           replicated
+[36mpipe_mw0: [39m  Mesh Dimension:          1
+[36mpipe_mw0: [39m  Spatial Dimension:       1
+[36mpipe_mw0: [39m  Nodes:                   101
+[36mpipe_mw0: [39m  Elems:                   100
+[36mpipe_mw0: [39m  Num Subdomains:          2
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mNonlinear System:
+[36mpipe_mw0: [39m  Num DOFs:                303
+[36mpipe_mw0: [39m  Num Local DOFs:          303
+[36mpipe_mw0: [39m  Variables:               { "q" "p" "T" } 
+[36mpipe_mw0: [39m  Finite Element Types:    "LAGRANGE" 
+[36mpipe_mw0: [39m  Approximation Orders:    "FIRST" 
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mAuxiliary System:
+[36mpipe_mw0: [39m  Num DOFs:                1504
+[36mpipe_mw0: [39m  Num Local DOFs:          1504
+[36mpipe_mw0: [39m  Variables:               { "density" "viscosity" "h_from_p_T" } { "pp_mw_res" "rho_mw_res" "mu_mw_res" 
+[36mpipe_mw0: [39m                             "h_mw_res" } { "total_thermal_resistivity" "well_P" "well_T" "well_q" "well_velocity" 
+[36mpipe_mw0: [39m                             } 
+[36mpipe_mw0: [39m  Finite Element Types:    "MONOMIAL" "LAGRANGE" "MONOMIAL" 
+[36mpipe_mw0: [39m  Approximation Orders:    "FIRST" "FIRST" "CONSTANT" 
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mExecution Information:
+[36mpipe_mw0: [39m  Executioner:             Transient
+[36mpipe_mw0: [39m  TimeStepper:             IterationAdaptiveDT
+[36mpipe_mw0: [39m  TimeIntegrator:          ImplicitEuler
+[36mpipe_mw0: [39m  Solver Mode:             NEWTON
+[36mpipe_mw0: [39m  MOOSE Preconditioner:    SMP
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39m[31mLEGACY MODES ENABLED:[39m
+[36mpipe_mw0: [39m This application uses the legacy material output option: material properties are output only on TIMESTEP_END, not INITIAL. To remove this message, set 'use_legacy_material_output' to false in this application. If there are gold output files that contain material property output for which output occurs on INITIAL, then these will generate diffs due to zero values being stored, and these tests should be re-golded.
+[36mpipe_mw0: [39m[39m
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 0, time = 0
+Warning, Exodus files cannot have titles longer than 80 characters.  Your title will be truncated.
+
+
+Time Step 0, time = 0
+Warning, Exodus files cannot have titles longer than 80 characters.  Your title will be truncated.
+
+Time Step 1, time = 1, dt = 1
+
+[35mInitial fixed point residual norm: [39m-nan[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 1, time = 1, dt = 1
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m7.818894e+00[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [31m-nan[39m
+ 1 Picard |R| = [32m7.818894e+00[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 1, time = 1, dt = 1
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.615758e-08[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [31m-nan[39m
+ 1 Picard |R| = [32m7.818894e+00[39m
+ 2 Picard |R| = [32m1.615758e-08[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 2, time = 2.25, dt = 1.25
+
+[35mInitial fixed point residual norm: [39m3.107027e+00[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 2, time = 2.25, dt = 1.25
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m3.108642e+00[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m3.107027e+00[39m
+ 1 Picard |R| = [31m3.108642e+00[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 2, time = 2.25, dt = 1.25
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.314050e+00[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m3.107027e+00[39m
+ 1 Picard |R| = [31m3.108642e+00[39m
+ 2 Picard |R| = [32m1.314050e+00[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 2, time = 2.25, dt = 1.25
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m7.875263e-02[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m3.107027e+00[39m
+ 1 Picard |R| = [31m3.108642e+00[39m
+ 2 Picard |R| = [32m1.314050e+00[39m
+ 3 Picard |R| = [32m7.875263e-02[39m
+
+[35mBeginning fixed point iteration 3[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 2, time = 2.25, dt = 1.25
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m4.720124e-03[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m3.107027e+00[39m
+ 1 Picard |R| = [31m3.108642e+00[39m
+ 2 Picard |R| = [32m1.314050e+00[39m
+ 3 Picard |R| = [32m7.875263e-02[39m
+ 4 Picard |R| = [32m4.720124e-03[39m
+
+[35mBeginning fixed point iteration 4[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 2, time = 2.25, dt = 1.25
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.829077e-04[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m3.107027e+00[39m
+ 1 Picard |R| = [31m3.108642e+00[39m
+ 2 Picard |R| = [32m1.314050e+00[39m
+ 3 Picard |R| = [32m7.875263e-02[39m
+ 4 Picard |R| = [32m4.720124e-03[39m
+ 5 Picard |R| = [32m2.829077e-04[39m
+
+[35mBeginning fixed point iteration 5[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 2, time = 2.25, dt = 1.25
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.695671e-05[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m3.107027e+00[39m
+ 1 Picard |R| = [31m3.108642e+00[39m
+ 2 Picard |R| = [32m1.314050e+00[39m
+ 3 Picard |R| = [32m7.875263e-02[39m
+ 4 Picard |R| = [32m4.720124e-03[39m
+ 5 Picard |R| = [32m2.829077e-04[39m
+ 6 Picard |R| = [32m1.695671e-05[39m
+
+Fixed point convergence reason: CONVERGED_RELATIVE
+
+
+Time Step 3, time = 3.8125, dt = 1.5625
+
+[35mInitial fixed point residual norm: [39m1.196767e+00[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 3, time = 3.8125, dt = 1.5625
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.019189e+00[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m1.196767e+00[39m
+ 1 Picard |R| = [31m2.019189e+00[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 3, time = 3.8125, dt = 1.5625
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.209597e-01[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m1.196767e+00[39m
+ 1 Picard |R| = [31m2.019189e+00[39m
+ 2 Picard |R| = [32m1.209597e-01[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 3, time = 3.8125, dt = 1.5625
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m7.074297e-03[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m1.196767e+00[39m
+ 1 Picard |R| = [31m2.019189e+00[39m
+ 2 Picard |R| = [32m1.209597e-01[39m
+ 3 Picard |R| = [32m7.074297e-03[39m
+
+[35mBeginning fixed point iteration 3[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 3, time = 3.8125, dt = 1.5625
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m4.137336e-04[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m1.196767e+00[39m
+ 1 Picard |R| = [31m2.019189e+00[39m
+ 2 Picard |R| = [32m1.209597e-01[39m
+ 3 Picard |R| = [32m7.074297e-03[39m
+ 4 Picard |R| = [32m4.137336e-04[39m
+
+[35mBeginning fixed point iteration 4[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 3, time = 3.8125, dt = 1.5625
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.419716e-05[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m1.196767e+00[39m
+ 1 Picard |R| = [31m2.019189e+00[39m
+ 2 Picard |R| = [32m1.209597e-01[39m
+ 3 Picard |R| = [32m7.074297e-03[39m
+ 4 Picard |R| = [32m4.137336e-04[39m
+ 5 Picard |R| = [32m2.419716e-05[39m
+
+[35mBeginning fixed point iteration 5[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 3, time = 3.8125, dt = 1.5625
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.415461e-06[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m1.196767e+00[39m
+ 1 Picard |R| = [31m2.019189e+00[39m
+ 2 Picard |R| = [32m1.209597e-01[39m
+ 3 Picard |R| = [32m7.074297e-03[39m
+ 4 Picard |R| = [32m4.137336e-04[39m
+ 5 Picard |R| = [32m2.419716e-05[39m
+ 6 Picard |R| = [32m1.415461e-06[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 4, time = 5.76562, dt = 1.95312
+
+[35mInitial fixed point residual norm: [39m1.327034e+00[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 4, time = 5.76562, dt = 1.95312
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.537811e+00[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+Currently Executing
+  Finished Solving                                                                       [[33m  5.48 s[39m] [[33m  173 MB[39m]
+
+
+ 0 Picard |R| = [32m1.327034e+00[39m
+ 1 Picard |R| = [31m1.537811e+00[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 4, time = 5.76562, dt = 1.95312
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m8.750911e-02[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m1.327034e+00[39m
+ 1 Picard |R| = [31m1.537811e+00[39m
+ 2 Picard |R| = [32m8.750911e-02[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 4, time = 5.76562, dt = 1.95312
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m4.885915e-03[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m1.327034e+00[39m
+ 1 Picard |R| = [31m1.537811e+00[39m
+ 2 Picard |R| = [32m8.750911e-02[39m
+ 3 Picard |R| = [32m4.885915e-03[39m
+
+[35mBeginning fixed point iteration 3[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 4, time = 5.76562, dt = 1.95312
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.727957e-04[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m1.327034e+00[39m
+ 1 Picard |R| = [31m1.537811e+00[39m
+ 2 Picard |R| = [32m8.750911e-02[39m
+ 3 Picard |R| = [32m4.885915e-03[39m
+ 4 Picard |R| = [32m2.727957e-04[39m
+
+[35mBeginning fixed point iteration 4[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 4, time = 5.76562, dt = 1.95312
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.523130e-05[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m1.327034e+00[39m
+ 1 Picard |R| = [31m1.537811e+00[39m
+ 2 Picard |R| = [32m8.750911e-02[39m
+ 3 Picard |R| = [32m4.885915e-03[39m
+ 4 Picard |R| = [32m2.727957e-04[39m
+ 5 Picard |R| = [32m1.523130e-05[39m
+
+[35mBeginning fixed point iteration 5[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 4, time = 5.76562, dt = 1.95312
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m8.506338e-07[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m1.327034e+00[39m
+ 1 Picard |R| = [31m1.537811e+00[39m
+ 2 Picard |R| = [32m8.750911e-02[39m
+ 3 Picard |R| = [32m4.885915e-03[39m
+ 4 Picard |R| = [32m2.727957e-04[39m
+ 5 Picard |R| = [32m1.523130e-05[39m
+ 6 Picard |R| = [32m8.506338e-07[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 5, time = 8.20703, dt = 2.44141
+
+[35mInitial fixed point residual norm: [39m1.052614e+00[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 5, time = 8.20703, dt = 2.44141
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.041038e+00[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m  6.21 s[39m] [[33m  178 MB[39m]
+
+
+ 0 Picard |R| = [32m1.052614e+00[39m
+ 1 Picard |R| = [33m1.041038e+00[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 5, time = 8.20703, dt = 2.44141
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m5.121392e-02[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m  6.09 s[39m] [[33m  178 MB[39m]
+
+
+ 0 Picard |R| = [32m1.052614e+00[39m
+ 1 Picard |R| = [33m1.041038e+00[39m
+ 2 Picard |R| = [32m5.121392e-02[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 5, time = 8.20703, dt = 2.44141
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.674780e-03[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m1.052614e+00[39m
+ 1 Picard |R| = [33m1.041038e+00[39m
+ 2 Picard |R| = [32m5.121392e-02[39m
+ 3 Picard |R| = [32m2.674780e-03[39m
+
+[35mBeginning fixed point iteration 3[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 5, time = 8.20703, dt = 2.44141
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.396975e-04[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m1.052614e+00[39m
+ 1 Picard |R| = [33m1.041038e+00[39m
+ 2 Picard |R| = [32m5.121392e-02[39m
+ 3 Picard |R| = [32m2.674780e-03[39m
+ 4 Picard |R| = [32m1.396975e-04[39m
+
+[35mBeginning fixed point iteration 4[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 5, time = 8.20703, dt = 2.44141
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m7.296199e-06[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m1.052614e+00[39m
+ 1 Picard |R| = [33m1.041038e+00[39m
+ 2 Picard |R| = [32m5.121392e-02[39m
+ 3 Picard |R| = [32m2.674780e-03[39m
+ 4 Picard |R| = [32m1.396975e-04[39m
+ 5 Picard |R| = [32m7.296199e-06[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 6, time = 11.2588, dt = 3.05176
+
+[35mInitial fixed point residual norm: [39m7.811016e-01[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 6, time = 11.2588, dt = 3.05176
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m7.530287e-01[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m  6.80 s[39m] [[33m  180 MB[39m]
+
+
+ 0 Picard |R| = [32m7.811016e-01[39m
+ 1 Picard |R| = [33m7.530287e-01[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 6, time = 11.2588, dt = 3.05176
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.917828e-02[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m  6.77 s[39m] [[33m  181 MB[39m]
+
+
+ 0 Picard |R| = [32m7.811016e-01[39m
+ 1 Picard |R| = [33m7.530287e-01[39m
+ 2 Picard |R| = [32m2.917828e-02[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 6, time = 11.2588, dt = 3.05176
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.399435e-03[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m7.811016e-01[39m
+ 1 Picard |R| = [33m7.530287e-01[39m
+ 2 Picard |R| = [32m2.917828e-02[39m
+ 3 Picard |R| = [32m1.399435e-03[39m
+
+[35mBeginning fixed point iteration 3[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 6, time = 11.2588, dt = 3.05176
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m6.711891e-05[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m7.811016e-01[39m
+ 1 Picard |R| = [33m7.530287e-01[39m
+ 2 Picard |R| = [32m2.917828e-02[39m
+ 3 Picard |R| = [32m1.399435e-03[39m
+ 4 Picard |R| = [32m6.711891e-05[39m
+
+[35mBeginning fixed point iteration 4[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 6, time = 11.2588, dt = 3.05176
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m3.219182e-06[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m7.811016e-01[39m
+ 1 Picard |R| = [33m7.530287e-01[39m
+ 2 Picard |R| = [32m2.917828e-02[39m
+ 3 Picard |R| = [32m1.399435e-03[39m
+ 4 Picard |R| = [32m6.711891e-05[39m
+ 5 Picard |R| = [32m3.219182e-06[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 7, time = 15.0735, dt = 3.8147
+
+[35mInitial fixed point residual norm: [39m6.004847e-01[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 7, time = 15.0735, dt = 3.8147
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m5.854027e-01[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m  8.33 s[39m] [[33m  182 MB[39m]
+
+
+ 0 Picard |R| = [32m6.004847e-01[39m
+ 1 Picard |R| = [33m5.854027e-01[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 7, time = 15.0735, dt = 3.8147
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.785339e-02[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m  6.02 s[39m] [[33m  183 MB[39m]
+
+
+ 0 Picard |R| = [32m6.004847e-01[39m
+ 1 Picard |R| = [33m5.854027e-01[39m
+ 2 Picard |R| = [32m1.785339e-02[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 7, time = 15.0735, dt = 3.8147
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m7.737673e-04[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m6.004847e-01[39m
+ 1 Picard |R| = [33m5.854027e-01[39m
+ 2 Picard |R| = [32m1.785339e-02[39m
+ 3 Picard |R| = [32m7.737673e-04[39m
+
+[35mBeginning fixed point iteration 3[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 7, time = 15.0735, dt = 3.8147
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m3.353497e-05[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m6.004847e-01[39m
+ 1 Picard |R| = [33m5.854027e-01[39m
+ 2 Picard |R| = [32m1.785339e-02[39m
+ 3 Picard |R| = [32m7.737673e-04[39m
+ 4 Picard |R| = [32m3.353497e-05[39m
+
+[35mBeginning fixed point iteration 4[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 7, time = 15.0735, dt = 3.8147
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.453907e-06[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m6.004847e-01[39m
+ 1 Picard |R| = [33m5.854027e-01[39m
+ 2 Picard |R| = [32m1.785339e-02[39m
+ 3 Picard |R| = [32m7.737673e-04[39m
+ 4 Picard |R| = [32m3.353497e-05[39m
+ 5 Picard |R| = [32m1.453907e-06[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 8, time = 19.8419, dt = 4.76837
+
+[35mInitial fixed point residual norm: [39m4.773541e-01[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 8, time = 19.8419, dt = 4.76837
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m4.694909e-01[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m  9.86 s[39m] [[33m  184 MB[39m]
+
+
+ 0 Picard |R| = [32m4.773541e-01[39m
+ 1 Picard |R| = [33m4.694909e-01[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 8, time = 19.8419, dt = 4.76837
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.181986e-02[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m  6.64 s[39m] [[33m  184 MB[39m]
+
+
+ 0 Picard |R| = [32m4.773541e-01[39m
+ 1 Picard |R| = [33m4.694909e-01[39m
+ 2 Picard |R| = [32m1.181986e-02[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 8, time = 19.8419, dt = 4.76837
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m4.567922e-04[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m4.773541e-01[39m
+ 1 Picard |R| = [33m4.694909e-01[39m
+ 2 Picard |R| = [32m1.181986e-02[39m
+ 3 Picard |R| = [32m4.567922e-04[39m
+
+[35mBeginning fixed point iteration 3[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 8, time = 19.8419, dt = 4.76837
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.765320e-05[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m4.773541e-01[39m
+ 1 Picard |R| = [33m4.694909e-01[39m
+ 2 Picard |R| = [32m1.181986e-02[39m
+ 3 Picard |R| = [32m4.567922e-04[39m
+ 4 Picard |R| = [32m1.765320e-05[39m
+
+[35mBeginning fixed point iteration 4[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 8, time = 19.8419, dt = 4.76837
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m6.824811e-07[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m4.773541e-01[39m
+ 1 Picard |R| = [33m4.694909e-01[39m
+ 2 Picard |R| = [32m1.181986e-02[39m
+ 3 Picard |R| = [32m4.567922e-04[39m
+ 4 Picard |R| = [32m1.765320e-05[39m
+ 5 Picard |R| = [32m6.824811e-07[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 9, time = 25.8023, dt = 5.96046
+
+[35mInitial fixed point residual norm: [39m3.857917e-01[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 9, time = 25.8023, dt = 5.96046
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m3.810029e-01[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m  9.55 s[39m] [[33m  186 MB[39m]
+
+
+ 0 Picard |R| = [32m3.857917e-01[39m
+ 1 Picard |R| = [33m3.810029e-01[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 9, time = 25.8023, dt = 5.96046
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m8.185582e-03[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m  8.29 s[39m] [[33m  187 MB[39m]
+
+
+ 0 Picard |R| = [32m3.857917e-01[39m
+ 1 Picard |R| = [33m3.810029e-01[39m
+ 2 Picard |R| = [32m8.185582e-03[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 9, time = 25.8023, dt = 5.96046
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.792953e-04[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m3.857917e-01[39m
+ 1 Picard |R| = [33m3.810029e-01[39m
+ 2 Picard |R| = [32m8.185582e-03[39m
+ 3 Picard |R| = [32m2.792953e-04[39m
+
+[35mBeginning fixed point iteration 3[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 9, time = 25.8023, dt = 5.96046
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m9.530050e-06[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m3.857917e-01[39m
+ 1 Picard |R| = [33m3.810029e-01[39m
+ 2 Picard |R| = [32m8.185582e-03[39m
+ 3 Picard |R| = [32m2.792953e-04[39m
+ 4 Picard |R| = [32m9.530050e-06[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 10, time = 33.2529, dt = 7.45058
+
+[35mInitial fixed point residual norm: [39m3.139178e-01[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 10, time = 33.2529, dt = 7.45058
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m3.106982e-01[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 11.07 s[39m] [[33m  189 MB[39m]
+
+
+ 0 Picard |R| = [32m3.139178e-01[39m
+ 1 Picard |R| = [33m3.106982e-01[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 10, time = 33.2529, dt = 7.45058
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m5.773761e-03[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 11.02 s[39m] [[33m  190 MB[39m]
+
+
+ 0 Picard |R| = [32m3.139178e-01[39m
+ 1 Picard |R| = [33m3.106982e-01[39m
+ 2 Picard |R| = [32m5.773761e-03[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 10, time = 33.2529, dt = 7.45058
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.729540e-04[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m3.139178e-01[39m
+ 1 Picard |R| = [33m3.106982e-01[39m
+ 2 Picard |R| = [32m5.773761e-03[39m
+ 3 Picard |R| = [32m1.729540e-04[39m
+
+[35mBeginning fixed point iteration 3[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 10, time = 33.2529, dt = 7.45058
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m5.181119e-06[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m3.139178e-01[39m
+ 1 Picard |R| = [33m3.106982e-01[39m
+ 2 Picard |R| = [32m5.773761e-03[39m
+ 3 Picard |R| = [32m1.729540e-04[39m
+ 4 Picard |R| = [32m5.181119e-06[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 11, time = 42.5661, dt = 9.31323
+
+[35mInitial fixed point residual norm: [39m2.558201e-01[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 11, time = 42.5661, dt = 9.31323
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.537839e-01[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 11.15 s[39m] [[33m  191 MB[39m]
+
+
+ 0 Picard |R| = [32m2.558201e-01[39m
+ 1 Picard |R| = [33m2.537839e-01[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 11, time = 42.5661, dt = 9.31323
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m4.096833e-03[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m  9.43 s[39m] [[33m  191 MB[39m]
+
+
+ 0 Picard |R| = [32m2.558201e-01[39m
+ 1 Picard |R| = [33m2.537839e-01[39m
+ 2 Picard |R| = [32m4.096833e-03[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 11, time = 42.5661, dt = 9.31323
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.077401e-04[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m  5.31 s[39m] [[33m  191 MB[39m]
+
+
+ 0 Picard |R| = [32m2.558201e-01[39m
+ 1 Picard |R| = [33m2.537839e-01[39m
+ 2 Picard |R| = [32m4.096833e-03[39m
+ 3 Picard |R| = [32m1.077401e-04[39m
+
+[35mBeginning fixed point iteration 3[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 11, time = 42.5661, dt = 9.31323
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.833351e-06[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m2.558201e-01[39m
+ 1 Picard |R| = [33m2.537839e-01[39m
+ 2 Picard |R| = [32m4.096833e-03[39m
+ 3 Picard |R| = [32m1.077401e-04[39m
+ 4 Picard |R| = [32m2.833351e-06[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 12, time = 54.2077, dt = 11.6415
+
+[35mInitial fixed point residual norm: [39m2.078239e-01[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 12, time = 54.2077, dt = 11.6415
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.071741e-01[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 11.16 s[39m] [[33m  191 MB[39m]
+
+
+ 0 Picard |R| = [32m2.078239e-01[39m
+ 1 Picard |R| = [33m2.071741e-01[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 12, time = 54.2077, dt = 11.6415
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.906654e-03[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m  7.37 s[39m] [[33m  192 MB[39m]
+
+
+ 0 Picard |R| = [32m2.078239e-01[39m
+ 1 Picard |R| = [33m2.071741e-01[39m
+ 2 Picard |R| = [32m2.906654e-03[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 12, time = 54.2077, dt = 11.6415
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m6.761938e-05[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m2.078239e-01[39m
+ 1 Picard |R| = [33m2.071741e-01[39m
+ 2 Picard |R| = [32m2.906654e-03[39m
+ 3 Picard |R| = [32m6.761938e-05[39m
+
+[35mBeginning fixed point iteration 3[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 12, time = 54.2077, dt = 11.6415
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.572970e-06[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m2.078239e-01[39m
+ 1 Picard |R| = [33m2.071741e-01[39m
+ 2 Picard |R| = [32m2.906654e-03[39m
+ 3 Picard |R| = [32m6.761938e-05[39m
+ 4 Picard |R| = [32m1.572970e-06[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 13, time = 68.7596, dt = 14.5519
+
+[35mInitial fixed point residual norm: [39m1.674343e-01[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 13, time = 68.7596, dt = 14.5519
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.689715e-01[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 12.53 s[39m] [[33m  193 MB[39m]
+
+
+ 0 Picard |R| = [32m1.674343e-01[39m
+ 1 Picard |R| = [31m1.689715e-01[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 13, time = 68.7596, dt = 14.5519
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.045673e-03[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m  7.78 s[39m] [[33m  193 MB[39m]
+
+
+ 0 Picard |R| = [32m1.674343e-01[39m
+ 1 Picard |R| = [31m1.689715e-01[39m
+ 2 Picard |R| = [32m2.045673e-03[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 13, time = 68.7596, dt = 14.5519
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m4.284533e-05[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m1.674343e-01[39m
+ 1 Picard |R| = [31m1.689715e-01[39m
+ 2 Picard |R| = [32m2.045673e-03[39m
+ 3 Picard |R| = [32m4.284533e-05[39m
+
+[35mBeginning fixed point iteration 3[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 13, time = 68.7596, dt = 14.5519
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m8.956085e-07[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m1.674343e-01[39m
+ 1 Picard |R| = [31m1.689715e-01[39m
+ 2 Picard |R| = [32m2.045673e-03[39m
+ 3 Picard |R| = [32m4.284533e-05[39m
+ 4 Picard |R| = [32m8.956085e-07[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 14, time = 86.9495, dt = 18.1899
+
+[35mInitial fixed point residual norm: [39m1.332090e-01[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 14, time = 86.9495, dt = 18.1899
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.386158e-01[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 13.07 s[39m] [[33m  194 MB[39m]
+
+
+ 0 Picard |R| = [32m1.332090e-01[39m
+ 1 Picard |R| = [31m1.386158e-01[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 14, time = 86.9495, dt = 18.1899
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.393394e-03[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m  9.93 s[39m] [[33m  197 MB[39m]
+
+
+ 0 Picard |R| = [32m1.332090e-01[39m
+ 1 Picard |R| = [31m1.386158e-01[39m
+ 2 Picard |R| = [32m1.393394e-03[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 14, time = 86.9495, dt = 18.1899
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.701081e-05[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m1.332090e-01[39m
+ 1 Picard |R| = [31m1.386158e-01[39m
+ 2 Picard |R| = [32m1.393394e-03[39m
+ 3 Picard |R| = [32m2.701081e-05[39m
+
+[35mBeginning fixed point iteration 3[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 14, time = 86.9495, dt = 18.1899
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m5.195240e-07[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m1.332090e-01[39m
+ 1 Picard |R| = [31m1.386158e-01[39m
+ 2 Picard |R| = [32m1.393394e-03[39m
+ 3 Picard |R| = [32m2.701081e-05[39m
+ 4 Picard |R| = [32m5.195240e-07[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 15, time = 109.687, dt = 22.7374
+
+[35mInitial fixed point residual norm: [39m1.046968e-01[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 15, time = 109.687, dt = 22.7374
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.164498e-01[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 14.64 s[39m] [[33m  218 MB[39m]
+
+
+ 0 Picard |R| = [32m1.046968e-01[39m
+ 1 Picard |R| = [31m1.164498e-01[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 15, time = 109.687, dt = 22.7374
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m8.401800e-04[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m  9.62 s[39m] [[33m  235 MB[39m]
+
+
+ 0 Picard |R| = [32m1.046968e-01[39m
+ 1 Picard |R| = [31m1.164498e-01[39m
+ 2 Picard |R| = [32m8.401800e-04[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 15, time = 109.687, dt = 22.7374
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.518807e-05[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m  5.21 s[39m] [[33m  235 MB[39m]
+
+
+ 0 Picard |R| = [32m1.046968e-01[39m
+ 1 Picard |R| = [31m1.164498e-01[39m
+ 2 Picard |R| = [32m8.401800e-04[39m
+ 3 Picard |R| = [32m1.518807e-05[39m
+
+[35mBeginning fixed point iteration 3[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 15, time = 109.687, dt = 22.7374
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.692626e-07[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m1.046968e-01[39m
+ 1 Picard |R| = [31m1.164498e-01[39m
+ 2 Picard |R| = [32m8.401800e-04[39m
+ 3 Picard |R| = [32m1.518807e-05[39m
+ 4 Picard |R| = [32m2.692626e-07[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 16, time = 138.109, dt = 28.4217
+
+[35mInitial fixed point residual norm: [39m8.217274e-02[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 16, time = 138.109, dt = 28.4217
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m9.878365e-02[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 14.96 s[39m] [[33m  268 MB[39m]
+
+
+ 0 Picard |R| = [32m8.217274e-02[39m
+ 1 Picard |R| = [31m9.878365e-02[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 16, time = 138.109, dt = 28.4217
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m3.822782e-04[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 10.12 s[39m] [[33m  269 MB[39m]
+
+
+ 0 Picard |R| = [32m8.217274e-02[39m
+ 1 Picard |R| = [31m9.878365e-02[39m
+ 2 Picard |R| = [32m3.822782e-04[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 16, time = 138.109, dt = 28.4217
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m5.672163e-06[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m  5.22 s[39m] [[33m  269 MB[39m]
+
+
+ 0 Picard |R| = [32m8.217274e-02[39m
+ 1 Picard |R| = [31m9.878365e-02[39m
+ 2 Picard |R| = [32m3.822782e-04[39m
+ 3 Picard |R| = [32m5.672163e-06[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 17, time = 173.636, dt = 35.5271
+
+[35mInitial fixed point residual norm: [39m6.600261e-02[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 17, time = 173.636, dt = 35.5271
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m8.294062e-02[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 20.71 s[39m] [[33m  271 MB[39m]
+
+
+ 0 Picard |R| = [32m6.600261e-02[39m
+ 1 Picard |R| = [31m8.294062e-02[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 17, time = 173.636, dt = 35.5271
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.655807e-03[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 17.85 s[39m] [[33m  271 MB[39m]
+
+
+ 0 Picard |R| = [32m6.600261e-02[39m
+ 1 Picard |R| = [31m8.294062e-02[39m
+ 2 Picard |R| = [32m1.655807e-03[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 17, time = 173.636, dt = 35.5271
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.897248e-05[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m  5.65 s[39m] [[33m  271 MB[39m]
+
+
+ 0 Picard |R| = [32m6.600261e-02[39m
+ 1 Picard |R| = [31m8.294062e-02[39m
+ 2 Picard |R| = [32m1.655807e-03[39m
+ 3 Picard |R| = [32m2.897248e-05[39m
+
+[35mBeginning fixed point iteration 3[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 17, time = 173.636, dt = 35.5271
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m5.723799e-07[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m6.600261e-02[39m
+ 1 Picard |R| = [31m8.294062e-02[39m
+ 2 Picard |R| = [32m1.655807e-03[39m
+ 3 Picard |R| = [32m2.897248e-05[39m
+ 4 Picard |R| = [32m5.723799e-07[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 18, time = 218.045, dt = 44.4089
+
+[35mInitial fixed point residual norm: [39m5.521166e-02[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 18, time = 218.045, dt = 44.4089
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.691434e-01[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 18.92 s[39m] [[33m  272 MB[39m]
+
+
+ 0 Picard |R| = [32m5.521166e-02[39m
+ 1 Picard |R| = [31m2.691434e-01[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 18, time = 218.045, dt = 44.4089
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.640975e-02[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 18.51 s[39m] [[33m  272 MB[39m]
+
+
+ 0 Picard |R| = [32m5.521166e-02[39m
+ 1 Picard |R| = [31m2.691434e-01[39m
+ 2 Picard |R| = [32m2.640975e-02[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 18, time = 218.045, dt = 44.4089
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.191375e-03[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 11.62 s[39m] [[33m  273 MB[39m]
+
+
+ 0 Picard |R| = [32m5.521166e-02[39m
+ 1 Picard |R| = [31m2.691434e-01[39m
+ 2 Picard |R| = [32m2.640975e-02[39m
+ 3 Picard |R| = [32m2.191375e-03[39m
+
+[35mBeginning fixed point iteration 3[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 18, time = 218.045, dt = 44.4089
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.820459e-04[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m  8.41 s[39m] [[33m  273 MB[39m]
+
+
+ 0 Picard |R| = [32m5.521166e-02[39m
+ 1 Picard |R| = [31m2.691434e-01[39m
+ 2 Picard |R| = [32m2.640975e-02[39m
+ 3 Picard |R| = [32m2.191375e-03[39m
+ 4 Picard |R| = [32m1.820459e-04[39m
+
+[35mBeginning fixed point iteration 4[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 18, time = 218.045, dt = 44.4089
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.512264e-05[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m  5.65 s[39m] [[33m  273 MB[39m]
+
+
+ 0 Picard |R| = [32m5.521166e-02[39m
+ 1 Picard |R| = [31m2.691434e-01[39m
+ 2 Picard |R| = [32m2.640975e-02[39m
+ 3 Picard |R| = [32m2.191375e-03[39m
+ 4 Picard |R| = [32m1.820459e-04[39m
+ 5 Picard |R| = [32m1.512264e-05[39m
+
+[35mBeginning fixed point iteration 5[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 18, time = 218.045, dt = 44.4089
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.256123e-06[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m5.521166e-02[39m
+ 1 Picard |R| = [31m2.691434e-01[39m
+ 2 Picard |R| = [32m2.640975e-02[39m
+ 3 Picard |R| = [32m2.191375e-03[39m
+ 4 Picard |R| = [32m1.820459e-04[39m
+ 5 Picard |R| = [32m1.512264e-05[39m
+ 6 Picard |R| = [32m1.256123e-06[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 19, time = 273.556, dt = 55.5112
+
+[35mInitial fixed point residual norm: [39m5.589820e-02[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 19, time = 273.556, dt = 55.5112
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m8.719857e-01[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 25.95 s[39m] [[33m  273 MB[39m]
+
+
+ 0 Picard |R| = [32m5.589820e-02[39m
+ 1 Picard |R| = [31m8.719857e-01[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 19, time = 273.556, dt = 55.5112
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.554099e-01[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 23.57 s[39m] [[33m  273 MB[39m]
+
+
+ 0 Picard |R| = [32m5.589820e-02[39m
+ 1 Picard |R| = [31m8.719857e-01[39m
+ 2 Picard |R| = [31m1.554099e-01[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 19, time = 273.556, dt = 55.5112
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.798899e-02[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 17.52 s[39m] [[33m  274 MB[39m]
+
+
+ 0 Picard |R| = [32m5.589820e-02[39m
+ 1 Picard |R| = [31m8.719857e-01[39m
+ 2 Picard |R| = [31m1.554099e-01[39m
+ 3 Picard |R| = [32m2.798899e-02[39m
+
+[35mBeginning fixed point iteration 3[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 19, time = 273.556, dt = 55.5112
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m4.999725e-03[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 15.20 s[39m] [[33m  274 MB[39m]
+
+
+ 0 Picard |R| = [32m5.589820e-02[39m
+ 1 Picard |R| = [31m8.719857e-01[39m
+ 2 Picard |R| = [31m1.554099e-01[39m
+ 3 Picard |R| = [32m2.798899e-02[39m
+ 4 Picard |R| = [32m4.999725e-03[39m
+
+[35mBeginning fixed point iteration 4[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 19, time = 273.556, dt = 55.5112
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m8.948044e-04[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 12.31 s[39m] [[33m  274 MB[39m]
+
+
+ 0 Picard |R| = [32m5.589820e-02[39m
+ 1 Picard |R| = [31m8.719857e-01[39m
+ 2 Picard |R| = [31m1.554099e-01[39m
+ 3 Picard |R| = [32m2.798899e-02[39m
+ 4 Picard |R| = [32m4.999725e-03[39m
+ 5 Picard |R| = [32m8.948044e-04[39m
+
+[35mBeginning fixed point iteration 5[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 19, time = 273.556, dt = 55.5112
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.601013e-04[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m  9.61 s[39m] [[33m  274 MB[39m]
+
+
+ 0 Picard |R| = [32m5.589820e-02[39m
+ 1 Picard |R| = [31m8.719857e-01[39m
+ 2 Picard |R| = [31m1.554099e-01[39m
+ 3 Picard |R| = [32m2.798899e-02[39m
+ 4 Picard |R| = [32m4.999725e-03[39m
+ 5 Picard |R| = [32m8.948044e-04[39m
+ 6 Picard |R| = [32m1.601013e-04[39m
+
+[35mBeginning fixed point iteration 6[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 19, time = 273.556, dt = 55.5112
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.864729e-05[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m  5.57 s[39m] [[33m  274 MB[39m]
+
+
+ 0 Picard |R| = [32m5.589820e-02[39m
+ 1 Picard |R| = [31m8.719857e-01[39m
+ 2 Picard |R| = [31m1.554099e-01[39m
+ 3 Picard |R| = [32m2.798899e-02[39m
+ 4 Picard |R| = [32m4.999725e-03[39m
+ 5 Picard |R| = [32m8.948044e-04[39m
+ 6 Picard |R| = [32m1.601013e-04[39m
+ 7 Picard |R| = [32m2.864729e-05[39m
+
+[35mBeginning fixed point iteration 7[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 19, time = 273.556, dt = 55.5112
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m5.125542e-06[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m5.589820e-02[39m
+ 1 Picard |R| = [31m8.719857e-01[39m
+ 2 Picard |R| = [31m1.554099e-01[39m
+ 3 Picard |R| = [32m2.798899e-02[39m
+ 4 Picard |R| = [32m4.999725e-03[39m
+ 5 Picard |R| = [32m8.948044e-04[39m
+ 6 Picard |R| = [32m1.601013e-04[39m
+ 7 Picard |R| = [32m2.864729e-05[39m
+ 8 Picard |R| = [32m5.125542e-06[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 20, time = 342.945, dt = 69.3889
+
+[35mInitial fixed point residual norm: [39m1.142848e-01[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 20, time = 342.945, dt = 69.3889
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.415189e+00[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 32.85 s[39m] [[33m  275 MB[39m]
+
+
+ 0 Picard |R| = [32m1.142848e-01[39m
+ 1 Picard |R| = [31m1.415189e+00[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 20, time = 342.945, dt = 69.3889
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.379250e-01[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 26.45 s[39m] [[33m  275 MB[39m]
+
+
+ 0 Picard |R| = [32m1.142848e-01[39m
+ 1 Picard |R| = [31m1.415189e+00[39m
+ 2 Picard |R| = [31m2.379250e-01[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 20, time = 342.945, dt = 69.3889
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m4.968369e-02[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 23.84 s[39m] [[33m  275 MB[39m]
+
+
+ 0 Picard |R| = [32m1.142848e-01[39m
+ 1 Picard |R| = [31m1.415189e+00[39m
+ 2 Picard |R| = [31m2.379250e-01[39m
+ 3 Picard |R| = [32m4.968369e-02[39m
+
+[35mBeginning fixed point iteration 3[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 20, time = 342.945, dt = 69.3889
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.018238e-02[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 18.52 s[39m] [[33m  275 MB[39m]
+
+
+ 0 Picard |R| = [32m1.142848e-01[39m
+ 1 Picard |R| = [31m1.415189e+00[39m
+ 2 Picard |R| = [31m2.379250e-01[39m
+ 3 Picard |R| = [32m4.968369e-02[39m
+ 4 Picard |R| = [32m1.018238e-02[39m
+
+[35mBeginning fixed point iteration 4[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 20, time = 342.945, dt = 69.3889
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.109925e-03[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 14.89 s[39m] [[33m  275 MB[39m]
+
+
+ 0 Picard |R| = [32m1.142848e-01[39m
+ 1 Picard |R| = [31m1.415189e+00[39m
+ 2 Picard |R| = [31m2.379250e-01[39m
+ 3 Picard |R| = [32m4.968369e-02[39m
+ 4 Picard |R| = [32m1.018238e-02[39m
+ 5 Picard |R| = [32m2.109925e-03[39m
+
+[35mBeginning fixed point iteration 5[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 20, time = 342.945, dt = 69.3889
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m4.372298e-04[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 11.68 s[39m] [[33m  276 MB[39m]
+
+
+ 0 Picard |R| = [32m1.142848e-01[39m
+ 1 Picard |R| = [31m1.415189e+00[39m
+ 2 Picard |R| = [31m2.379250e-01[39m
+ 3 Picard |R| = [32m4.968369e-02[39m
+ 4 Picard |R| = [32m1.018238e-02[39m
+ 5 Picard |R| = [32m2.109925e-03[39m
+ 6 Picard |R| = [32m4.372298e-04[39m
+
+[35mBeginning fixed point iteration 6[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 20, time = 342.945, dt = 69.3889
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m9.067456e-05[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m  9.39 s[39m] [[33m  276 MB[39m]
+
+
+ 0 Picard |R| = [32m1.142848e-01[39m
+ 1 Picard |R| = [31m1.415189e+00[39m
+ 2 Picard |R| = [31m2.379250e-01[39m
+ 3 Picard |R| = [32m4.968369e-02[39m
+ 4 Picard |R| = [32m1.018238e-02[39m
+ 5 Picard |R| = [32m2.109925e-03[39m
+ 6 Picard |R| = [32m4.372298e-04[39m
+ 7 Picard |R| = [32m9.067456e-05[39m
+
+[35mBeginning fixed point iteration 7[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 20, time = 342.945, dt = 69.3889
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.880627e-05[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m  6.30 s[39m] [[33m  276 MB[39m]
+
+
+ 0 Picard |R| = [32m1.142848e-01[39m
+ 1 Picard |R| = [31m1.415189e+00[39m
+ 2 Picard |R| = [31m2.379250e-01[39m
+ 3 Picard |R| = [32m4.968369e-02[39m
+ 4 Picard |R| = [32m1.018238e-02[39m
+ 5 Picard |R| = [32m2.109925e-03[39m
+ 6 Picard |R| = [32m4.372298e-04[39m
+ 7 Picard |R| = [32m9.067456e-05[39m
+ 8 Picard |R| = [32m1.880627e-05[39m
+
+[35mBeginning fixed point iteration 8[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 20, time = 342.945, dt = 69.3889
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m3.900297e-06[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m  5.95 s[39m] [[33m  276 MB[39m]
+
+
+ 0 Picard |R| = [32m1.142848e-01[39m
+ 1 Picard |R| = [31m1.415189e+00[39m
+ 2 Picard |R| = [31m2.379250e-01[39m
+ 3 Picard |R| = [32m4.968369e-02[39m
+ 4 Picard |R| = [32m1.018238e-02[39m
+ 5 Picard |R| = [32m2.109925e-03[39m
+ 6 Picard |R| = [32m4.372298e-04[39m
+ 7 Picard |R| = [32m9.067456e-05[39m
+ 8 Picard |R| = [32m1.880627e-05[39m
+ 9 Picard |R| = [32m3.900297e-06[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 21, time = 429.681, dt = 86.7362
+
+[35mInitial fixed point residual norm: [39m2.305027e-01[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 21, time = 429.681, dt = 86.7362
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.318082e+00[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 42.84 s[39m] [[33m  276 MB[39m]
+
+
+ 0 Picard |R| = [32m2.305027e-01[39m
+ 1 Picard |R| = [31m1.318082e+00[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 21, time = 429.681, dt = 86.7362
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.634448e-01[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 38.64 s[39m] [[33m  276 MB[39m]
+
+
+ 0 Picard |R| = [32m2.305027e-01[39m
+ 1 Picard |R| = [31m1.318082e+00[39m
+ 2 Picard |R| = [32m1.634448e-01[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 21, time = 429.681, dt = 86.7362
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m3.094742e-02[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 28.69 s[39m] [[33m  277 MB[39m]
+
+
+ 0 Picard |R| = [32m2.305027e-01[39m
+ 1 Picard |R| = [31m1.318082e+00[39m
+ 2 Picard |R| = [32m1.634448e-01[39m
+ 3 Picard |R| = [32m3.094742e-02[39m
+
+[35mBeginning fixed point iteration 3[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 21, time = 429.681, dt = 86.7362
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m5.954339e-03[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 23.11 s[39m] [[33m  277 MB[39m]
+
+
+ 0 Picard |R| = [32m2.305027e-01[39m
+ 1 Picard |R| = [31m1.318082e+00[39m
+ 2 Picard |R| = [32m1.634448e-01[39m
+ 3 Picard |R| = [32m3.094742e-02[39m
+ 4 Picard |R| = [32m5.954339e-03[39m
+
+[35mBeginning fixed point iteration 4[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 21, time = 429.681, dt = 86.7362
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.171433e-03[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 21.07 s[39m] [[33m  277 MB[39m]
+
+
+ 0 Picard |R| = [32m2.305027e-01[39m
+ 1 Picard |R| = [31m1.318082e+00[39m
+ 2 Picard |R| = [32m1.634448e-01[39m
+ 3 Picard |R| = [32m3.094742e-02[39m
+ 4 Picard |R| = [32m5.954339e-03[39m
+ 5 Picard |R| = [32m1.171433e-03[39m
+
+[35mBeginning fixed point iteration 5[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 21, time = 429.681, dt = 86.7362
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.313578e-04[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 14.03 s[39m] [[33m  277 MB[39m]
+
+
+ 0 Picard |R| = [32m2.305027e-01[39m
+ 1 Picard |R| = [31m1.318082e+00[39m
+ 2 Picard |R| = [32m1.634448e-01[39m
+ 3 Picard |R| = [32m3.094742e-02[39m
+ 4 Picard |R| = [32m5.954339e-03[39m
+ 5 Picard |R| = [32m1.171433e-03[39m
+ 6 Picard |R| = [32m2.313578e-04[39m
+
+[35mBeginning fixed point iteration 6[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 21, time = 429.681, dt = 86.7362
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m4.578476e-05[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 11.61 s[39m] [[33m  277 MB[39m]
+
+
+ 0 Picard |R| = [32m2.305027e-01[39m
+ 1 Picard |R| = [31m1.318082e+00[39m
+ 2 Picard |R| = [32m1.634448e-01[39m
+ 3 Picard |R| = [32m3.094742e-02[39m
+ 4 Picard |R| = [32m5.954339e-03[39m
+ 5 Picard |R| = [32m1.171433e-03[39m
+ 6 Picard |R| = [32m2.313578e-04[39m
+ 7 Picard |R| = [32m4.578476e-05[39m
+
+[35mBeginning fixed point iteration 7[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 21, time = 429.681, dt = 86.7362
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m9.065283e-06[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m  8.06 s[39m] [[33m  277 MB[39m]
+
+
+ 0 Picard |R| = [32m2.305027e-01[39m
+ 1 Picard |R| = [31m1.318082e+00[39m
+ 2 Picard |R| = [32m1.634448e-01[39m
+ 3 Picard |R| = [32m3.094742e-02[39m
+ 4 Picard |R| = [32m5.954339e-03[39m
+ 5 Picard |R| = [32m1.171433e-03[39m
+ 6 Picard |R| = [32m2.313578e-04[39m
+ 7 Picard |R| = [32m4.578476e-05[39m
+ 8 Picard |R| = [32m9.065283e-06[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 22, time = 538.101, dt = 108.42
+
+[35mInitial fixed point residual norm: [39m3.378330e-01[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 22, time = 538.101, dt = 108.42
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m9.614140e-01[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 45.92 s[39m] [[33m  277 MB[39m]
+
+
+ 0 Picard |R| = [32m3.378330e-01[39m
+ 1 Picard |R| = [31m9.614140e-01[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 22, time = 538.101, dt = 108.42
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m8.796281e-02[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 37.63 s[39m] [[33m  277 MB[39m]
+
+
+ 0 Picard |R| = [32m3.378330e-01[39m
+ 1 Picard |R| = [31m9.614140e-01[39m
+ 2 Picard |R| = [32m8.796281e-02[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 22, time = 538.101, dt = 108.42
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.512985e-02[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 30.59 s[39m] [[33m  277 MB[39m]
+
+
+ 0 Picard |R| = [32m3.378330e-01[39m
+ 1 Picard |R| = [31m9.614140e-01[39m
+ 2 Picard |R| = [32m8.796281e-02[39m
+ 3 Picard |R| = [32m1.512985e-02[39m
+
+[35mBeginning fixed point iteration 3[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 22, time = 538.101, dt = 108.42
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.650355e-03[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 25.39 s[39m] [[33m  277 MB[39m]
+
+
+ 0 Picard |R| = [32m3.378330e-01[39m
+ 1 Picard |R| = [31m9.614140e-01[39m
+ 2 Picard |R| = [32m8.796281e-02[39m
+ 3 Picard |R| = [32m1.512985e-02[39m
+ 4 Picard |R| = [32m2.650355e-03[39m
+
+[35mBeginning fixed point iteration 4[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 22, time = 538.101, dt = 108.42
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m4.707982e-04[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 18.50 s[39m] [[33m  277 MB[39m]
+
+
+ 0 Picard |R| = [32m3.378330e-01[39m
+ 1 Picard |R| = [31m9.614140e-01[39m
+ 2 Picard |R| = [32m8.796281e-02[39m
+ 3 Picard |R| = [32m1.512985e-02[39m
+ 4 Picard |R| = [32m2.650355e-03[39m
+ 5 Picard |R| = [32m4.707982e-04[39m
+
+[35mBeginning fixed point iteration 5[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 22, time = 538.101, dt = 108.42
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m8.371290e-05[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 16.09 s[39m] [[33m  277 MB[39m]
+
+
+ 0 Picard |R| = [32m3.378330e-01[39m
+ 1 Picard |R| = [31m9.614140e-01[39m
+ 2 Picard |R| = [32m8.796281e-02[39m
+ 3 Picard |R| = [32m1.512985e-02[39m
+ 4 Picard |R| = [32m2.650355e-03[39m
+ 5 Picard |R| = [32m4.707982e-04[39m
+ 6 Picard |R| = [32m8.371290e-05[39m
+
+[35mBeginning fixed point iteration 6[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 22, time = 538.101, dt = 108.42
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.489331e-05[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m  9.01 s[39m] [[33m  277 MB[39m]
+
+
+ 0 Picard |R| = [32m3.378330e-01[39m
+ 1 Picard |R| = [31m9.614140e-01[39m
+ 2 Picard |R| = [32m8.796281e-02[39m
+ 3 Picard |R| = [32m1.512985e-02[39m
+ 4 Picard |R| = [32m2.650355e-03[39m
+ 5 Picard |R| = [32m4.707982e-04[39m
+ 6 Picard |R| = [32m8.371290e-05[39m
+ 7 Picard |R| = [32m1.489331e-05[39m
+
+[35mBeginning fixed point iteration 7[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 22, time = 538.101, dt = 108.42
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.649887e-06[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m  6.30 s[39m] [[33m  277 MB[39m]
+
+
+ 0 Picard |R| = [32m3.378330e-01[39m
+ 1 Picard |R| = [31m9.614140e-01[39m
+ 2 Picard |R| = [32m8.796281e-02[39m
+ 3 Picard |R| = [32m1.512985e-02[39m
+ 4 Picard |R| = [32m2.650355e-03[39m
+ 5 Picard |R| = [32m4.707982e-04[39m
+ 6 Picard |R| = [32m8.371290e-05[39m
+ 7 Picard |R| = [32m1.489331e-05[39m
+ 8 Picard |R| = [32m2.649887e-06[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 23, time = 673.626, dt = 135.525
+
+[35mInitial fixed point residual norm: [39m3.986983e-01[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 23, time = 673.626, dt = 135.525
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m6.771758e-01[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 47.87 s[39m] [[33m  278 MB[39m]
+
+
+ 0 Picard |R| = [32m3.986983e-01[39m
+ 1 Picard |R| = [31m6.771758e-01[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 23, time = 673.626, dt = 135.525
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m3.493152e-02[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 42.08 s[39m] [[33m  278 MB[39m]
+
+
+ 0 Picard |R| = [32m3.986983e-01[39m
+ 1 Picard |R| = [31m6.771758e-01[39m
+ 2 Picard |R| = [32m3.493152e-02[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 23, time = 673.626, dt = 135.525
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m3.860610e-03[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 32.44 s[39m] [[33m  278 MB[39m]
+
+
+ 0 Picard |R| = [32m3.986983e-01[39m
+ 1 Picard |R| = [31m6.771758e-01[39m
+ 2 Picard |R| = [32m3.493152e-02[39m
+ 3 Picard |R| = [32m3.860610e-03[39m
+
+[35mBeginning fixed point iteration 3[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 23, time = 673.626, dt = 135.525
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m4.300659e-04[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 28.70 s[39m] [[33m  278 MB[39m]
+
+
+ 0 Picard |R| = [32m3.986983e-01[39m
+ 1 Picard |R| = [31m6.771758e-01[39m
+ 2 Picard |R| = [32m3.493152e-02[39m
+ 3 Picard |R| = [32m3.860610e-03[39m
+ 4 Picard |R| = [32m4.300659e-04[39m
+
+[35mBeginning fixed point iteration 4[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 23, time = 673.626, dt = 135.525
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m4.811955e-05[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 18.74 s[39m] [[33m  278 MB[39m]
+
+
+ 0 Picard |R| = [32m3.986983e-01[39m
+ 1 Picard |R| = [31m6.771758e-01[39m
+ 2 Picard |R| = [32m3.493152e-02[39m
+ 3 Picard |R| = [32m3.860610e-03[39m
+ 4 Picard |R| = [32m4.300659e-04[39m
+ 5 Picard |R| = [32m4.811955e-05[39m
+
+[35mBeginning fixed point iteration 5[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 23, time = 673.626, dt = 135.525
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m5.384949e-06[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 12.41 s[39m] [[33m  278 MB[39m]
+
+
+ 0 Picard |R| = [32m3.986983e-01[39m
+ 1 Picard |R| = [31m6.771758e-01[39m
+ 2 Picard |R| = [32m3.493152e-02[39m
+ 3 Picard |R| = [32m3.860610e-03[39m
+ 4 Picard |R| = [32m4.300659e-04[39m
+ 5 Picard |R| = [32m4.811955e-05[39m
+ 6 Picard |R| = [32m5.384949e-06[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 24, time = 843.033, dt = 169.407
+
+[35mInitial fixed point residual norm: [39m4.213401e-01[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 24, time = 843.033, dt = 169.407
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m5.194608e-01[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 55.80 s[39m] [[33m  278 MB[39m]
+
+
+ 0 Picard |R| = [32m4.213401e-01[39m
+ 1 Picard |R| = [31m5.194608e-01[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 24, time = 843.033, dt = 169.407
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m8.200056e-03[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 41.63 s[39m] [[33m  279 MB[39m]
+
+
+ 0 Picard |R| = [32m4.213401e-01[39m
+ 1 Picard |R| = [31m5.194608e-01[39m
+ 2 Picard |R| = [32m8.200056e-03[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 24, time = 843.033, dt = 169.407
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m3.817630e-04[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 32.74 s[39m] [[33m  279 MB[39m]
+
+
+ 0 Picard |R| = [32m4.213401e-01[39m
+ 1 Picard |R| = [31m5.194608e-01[39m
+ 2 Picard |R| = [32m8.200056e-03[39m
+ 3 Picard |R| = [32m3.817630e-04[39m
+
+[35mBeginning fixed point iteration 3[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 24, time = 843.033, dt = 169.407
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.799914e-05[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 19.09 s[39m] [[33m  279 MB[39m]
+
+
+ 0 Picard |R| = [32m4.213401e-01[39m
+ 1 Picard |R| = [31m5.194608e-01[39m
+ 2 Picard |R| = [32m8.200056e-03[39m
+ 3 Picard |R| = [32m3.817630e-04[39m
+ 4 Picard |R| = [32m1.799914e-05[39m
+
+[35mBeginning fixed point iteration 4[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 24, time = 843.033, dt = 169.407
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m8.504579e-07[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m  6.34 s[39m] [[33m  279 MB[39m]
+
+
+ 0 Picard |R| = [32m4.213401e-01[39m
+ 1 Picard |R| = [31m5.194608e-01[39m
+ 2 Picard |R| = [32m8.200056e-03[39m
+ 3 Picard |R| = [32m3.817630e-04[39m
+ 4 Picard |R| = [32m1.799914e-05[39m
+ 5 Picard |R| = [32m8.504579e-07[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 25, time = 1054.79, dt = 211.758
+
+[35mInitial fixed point residual norm: [39m4.252658e-01[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 25, time = 1054.79, dt = 211.758
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m4.536645e-01[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 46.70 s[39m] [[33m  279 MB[39m]
+
+
+ 0 Picard |R| = [32m4.252658e-01[39m
+ 1 Picard |R| = [31m4.536645e-01[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 25, time = 1054.79, dt = 211.758
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.486074e-03[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 36.45 s[39m] [[33m  279 MB[39m]
+
+
+ 0 Picard |R| = [32m4.252658e-01[39m
+ 1 Picard |R| = [31m4.536645e-01[39m
+ 2 Picard |R| = [32m1.486074e-03[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 25, time = 1054.79, dt = 211.758
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.475268e-05[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 22.06 s[39m] [[33m  279 MB[39m]
+
+
+ 0 Picard |R| = [32m4.252658e-01[39m
+ 1 Picard |R| = [31m4.536645e-01[39m
+ 2 Picard |R| = [32m1.486074e-03[39m
+ 3 Picard |R| = [32m2.475268e-05[39m
+
+[35mBeginning fixed point iteration 3[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 25, time = 1054.79, dt = 211.758
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m4.188640e-07[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m  6.00 s[39m] [[33m  279 MB[39m]
+
+
+ 0 Picard |R| = [32m4.252658e-01[39m
+ 1 Picard |R| = [31m4.536645e-01[39m
+ 2 Picard |R| = [32m1.486074e-03[39m
+ 3 Picard |R| = [32m2.475268e-05[39m
+ 4 Picard |R| = [32m4.188640e-07[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 26, time = 1319.49, dt = 264.698
+
+[35mInitial fixed point residual norm: [39m4.218994e-01[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 26, time = 1319.49, dt = 264.698
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m4.267768e-01[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 50.25 s[39m] [[33m  279 MB[39m]
+
+
+ 0 Picard |R| = [32m4.218994e-01[39m
+ 1 Picard |R| = [31m4.267768e-01[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 26, time = 1319.49, dt = 264.698
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m3.941966e-04[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 28.27 s[39m] [[33m  279 MB[39m]
+
+
+ 0 Picard |R| = [32m4.218994e-01[39m
+ 1 Picard |R| = [31m4.267768e-01[39m
+ 2 Picard |R| = [32m3.941966e-04[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 26, time = 1319.49, dt = 264.698
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m3.485014e-06[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m  9.43 s[39m] [[33m  279 MB[39m]
+
+
+ 0 Picard |R| = [32m4.218994e-01[39m
+ 1 Picard |R| = [31m4.267768e-01[39m
+ 2 Picard |R| = [32m3.941966e-04[39m
+ 3 Picard |R| = [32m3.485014e-06[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 27, time = 1650.36, dt = 330.872
+
+[35mInitial fixed point residual norm: [39m4.160971e-01[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 27, time = 1650.36, dt = 330.872
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m4.141206e-01[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 49.46 s[39m] [[33m  279 MB[39m]
+
+
+ 0 Picard |R| = [32m4.160971e-01[39m
+ 1 Picard |R| = [33m4.141206e-01[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 27, time = 1650.36, dt = 330.872
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.535777e-04[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 22.10 s[39m] [[33m  279 MB[39m]
+
+
+ 0 Picard |R| = [32m4.160971e-01[39m
+ 1 Picard |R| = [33m4.141206e-01[39m
+ 2 Picard |R| = [32m1.535777e-04[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 27, time = 1650.36, dt = 330.872
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.446432e-06[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m4.160971e-01[39m
+ 1 Picard |R| = [33m4.141206e-01[39m
+ 2 Picard |R| = [32m1.535777e-04[39m
+ 3 Picard |R| = [32m1.446432e-06[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 28, time = 2063.95, dt = 413.59
+
+[35mInitial fixed point residual norm: [39m4.101005e-01[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 28, time = 2063.95, dt = 413.59
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m4.082062e-01[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 45.35 s[39m] [[33m  279 MB[39m]
+
+
+ 0 Picard |R| = [32m4.101005e-01[39m
+ 1 Picard |R| = [33m4.082062e-01[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 28, time = 2063.95, dt = 413.59
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.108181e-05[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 15.61 s[39m] [[33m  279 MB[39m]
+
+
+ 0 Picard |R| = [32m4.101005e-01[39m
+ 1 Picard |R| = [33m4.082062e-01[39m
+ 2 Picard |R| = [32m2.108181e-05[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 28, time = 2063.95, dt = 413.59
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.172041e-07[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m4.101005e-01[39m
+ 1 Picard |R| = [33m4.082062e-01[39m
+ 2 Picard |R| = [32m2.108181e-05[39m
+ 3 Picard |R| = [32m2.172041e-07[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 29, time = 2580.94, dt = 516.988
+
+[35mInitial fixed point residual norm: [39m4.047956e-01[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 29, time = 2580.94, dt = 516.988
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m4.046070e-01[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 46.17 s[39m] [[33m  279 MB[39m]
+
+
+ 0 Picard |R| = [32m4.047956e-01[39m
+ 1 Picard |R| = [33m4.046070e-01[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 29, time = 2580.94, dt = 516.988
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m9.067052e-05[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 19.03 s[39m] [[33m  280 MB[39m]
+
+
+ 0 Picard |R| = [32m4.047956e-01[39m
+ 1 Picard |R| = [33m4.046070e-01[39m
+ 2 Picard |R| = [32m9.067052e-05[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 29, time = 2580.94, dt = 516.988
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.151544e-06[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m4.047956e-01[39m
+ 1 Picard |R| = [33m4.046070e-01[39m
+ 2 Picard |R| = [32m9.067052e-05[39m
+ 3 Picard |R| = [32m1.151544e-06[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 30, time = 3227.17, dt = 646.235
+
+[35mInitial fixed point residual norm: [39m3.999806e-01[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 30, time = 3227.17, dt = 646.235
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m4.008439e-01[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 47.14 s[39m] [[33m  280 MB[39m]
+
+
+ 0 Picard |R| = [32m3.999806e-01[39m
+ 1 Picard |R| = [31m4.008439e-01[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 30, time = 3227.17, dt = 646.235
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.938452e-04[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 19.99 s[39m] [[33m  280 MB[39m]
+
+
+ 0 Picard |R| = [32m3.999806e-01[39m
+ 1 Picard |R| = [31m4.008439e-01[39m
+ 2 Picard |R| = [32m1.938452e-04[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 30, time = 3227.17, dt = 646.235
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.647348e-06[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m3.999806e-01[39m
+ 1 Picard |R| = [31m4.008439e-01[39m
+ 2 Picard |R| = [32m1.938452e-04[39m
+ 3 Picard |R| = [32m2.647348e-06[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 31, time = 4034.97, dt = 807.794
+
+[35mInitial fixed point residual norm: [39m3.949883e-01[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 31, time = 4034.97, dt = 807.794
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m3.961969e-01[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 45.53 s[39m] [[33m  280 MB[39m]
+
+
+ 0 Picard |R| = [32m3.949883e-01[39m
+ 1 Picard |R| = [31m3.961969e-01[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 31, time = 4034.97, dt = 807.794
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.913238e-04[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 18.64 s[39m] [[33m  280 MB[39m]
+
+
+ 0 Picard |R| = [32m3.949883e-01[39m
+ 1 Picard |R| = [31m3.961969e-01[39m
+ 2 Picard |R| = [32m2.913238e-04[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 31, time = 4034.97, dt = 807.794
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m4.167689e-06[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m  5.96 s[39m] [[33m  280 MB[39m]
+
+
+ 0 Picard |R| = [32m3.949883e-01[39m
+ 1 Picard |R| = [31m3.961969e-01[39m
+ 2 Picard |R| = [32m2.913238e-04[39m
+ 3 Picard |R| = [32m4.167689e-06[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 32, time = 5044.71, dt = 1009.74
+
+[35mInitial fixed point residual norm: [39m3.891906e-01[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 32, time = 5044.71, dt = 1009.74
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m3.904591e-01[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 47.53 s[39m] [[33m  281 MB[39m]
+
+
+ 0 Picard |R| = [32m3.891906e-01[39m
+ 1 Picard |R| = [31m3.904591e-01[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 32, time = 5044.71, dt = 1009.74
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m3.834869e-04[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 20.05 s[39m] [[33m  281 MB[39m]
+
+
+ 0 Picard |R| = [32m3.891906e-01[39m
+ 1 Picard |R| = [31m3.904591e-01[39m
+ 2 Picard |R| = [32m3.834869e-04[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 32, time = 5044.71, dt = 1009.74
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m5.654601e-06[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m  6.59 s[39m] [[33m  281 MB[39m]
+
+
+ 0 Picard |R| = [32m3.891906e-01[39m
+ 1 Picard |R| = [31m3.904591e-01[39m
+ 2 Picard |R| = [32m3.834869e-04[39m
+ 3 Picard |R| = [32m5.654601e-06[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 33, time = 6306.89, dt = 1262.18
+
+[35mInitial fixed point residual norm: [39m3.821008e-01[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 33, time = 6306.89, dt = 1262.18
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m3.833574e-01[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 45.37 s[39m] [[33m  283 MB[39m]
+
+
+ 0 Picard |R| = [32m3.821008e-01[39m
+ 1 Picard |R| = [31m3.833574e-01[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 33, time = 6306.89, dt = 1262.18
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m4.736725e-04[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 19.34 s[39m] [[33m  283 MB[39m]
+
+
+ 0 Picard |R| = [32m3.821008e-01[39m
+ 1 Picard |R| = [31m3.833574e-01[39m
+ 2 Picard |R| = [32m4.736725e-04[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 33, time = 6306.89, dt = 1262.18
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m7.117087e-06[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m  6.81 s[39m] [[33m  283 MB[39m]
+
+
+ 0 Picard |R| = [32m3.821008e-01[39m
+ 1 Picard |R| = [31m3.833574e-01[39m
+ 2 Picard |R| = [32m4.736725e-04[39m
+ 3 Picard |R| = [32m7.117087e-06[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 34, time = 7884.61, dt = 1577.72
+
+[35mInitial fixed point residual norm: [39m3.733150e-01[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 34, time = 7884.61, dt = 1577.72
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m3.745434e-01[39m
+[35m
+Main app solve:[39m
+
+  Finished Solving                                                                       [[33m 41.02 s[39m] [[33m  283 MB[39m]
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m3.733150e-01[39m
+ 1 Picard |R| = [31m3.745434e-01[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 34, time = 7884.61, dt = 1577.72
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m5.647099e-04[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 19.11 s[39m] [[33m  283 MB[39m]
+
+
+ 0 Picard |R| = [32m3.733150e-01[39m
+ 1 Picard |R| = [31m3.745434e-01[39m
+ 2 Picard |R| = [32m5.647099e-04[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 34, time = 7884.61, dt = 1577.72
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m8.572275e-06[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m  7.13 s[39m] [[33m  283 MB[39m]
+
+
+ 0 Picard |R| = [32m3.733150e-01[39m
+ 1 Picard |R| = [31m3.745434e-01[39m
+ 2 Picard |R| = [32m5.647099e-04[39m
+ 3 Picard |R| = [32m8.572275e-06[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 35, time = 9856.76, dt = 1972.15
+
+[35mInitial fixed point residual norm: [39m3.624697e-01[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 35, time = 9856.76, dt = 1972.15
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m3.636628e-01[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 42.31 s[39m] [[33m  283 MB[39m]
+
+
+ 0 Picard |R| = [32m3.624697e-01[39m
+ 1 Picard |R| = [31m3.636628e-01[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 35, time = 9856.76, dt = 1972.15
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m6.568951e-04[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 20.36 s[39m] [[33m  283 MB[39m]
+
+
+ 0 Picard |R| = [32m3.624697e-01[39m
+ 1 Picard |R| = [31m3.636628e-01[39m
+ 2 Picard |R| = [32m6.568951e-04[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 35, time = 9856.76, dt = 1972.15
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.000888e-05[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m  6.63 s[39m] [[33m  283 MB[39m]
+
+
+ 0 Picard |R| = [32m3.624697e-01[39m
+ 1 Picard |R| = [31m3.636628e-01[39m
+ 2 Picard |R| = [32m6.568951e-04[39m
+ 3 Picard |R| = [32m1.000888e-05[39m
+
+[35mBeginning fixed point iteration 3[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 35, time = 9856.76, dt = 1972.15
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.507656e-07[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m3.624697e-01[39m
+ 1 Picard |R| = [31m3.636628e-01[39m
+ 2 Picard |R| = [32m6.568951e-04[39m
+ 3 Picard |R| = [32m1.000888e-05[39m
+ 4 Picard |R| = [32m1.507656e-07[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 36, time = 12322, dt = 2465.19
+
+[35mInitial fixed point residual norm: [39m3.492490e-01[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 36, time = 12322, dt = 2465.19
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m3.504004e-01[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 41.78 s[39m] [[33m  283 MB[39m]
+
+
+ 0 Picard |R| = [32m3.492490e-01[39m
+ 1 Picard |R| = [31m3.504004e-01[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 36, time = 12322, dt = 2465.19
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m7.485039e-04[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 21.51 s[39m] [[33m  283 MB[39m]
+
+
+ 0 Picard |R| = [32m3.492490e-01[39m
+ 1 Picard |R| = [31m3.504004e-01[39m
+ 2 Picard |R| = [32m7.485039e-04[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 36, time = 12322, dt = 2465.19
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.139170e-05[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 11.40 s[39m] [[33m  283 MB[39m]
+
+
+ 0 Picard |R| = [32m3.492490e-01[39m
+ 1 Picard |R| = [31m3.504004e-01[39m
+ 2 Picard |R| = [32m7.485039e-04[39m
+ 3 Picard |R| = [32m1.139170e-05[39m
+
+[35mBeginning fixed point iteration 3[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 36, time = 12322, dt = 2465.19
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.706811e-07[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m3.492490e-01[39m
+ 1 Picard |R| = [31m3.504004e-01[39m
+ 2 Picard |R| = [32m7.485039e-04[39m
+ 3 Picard |R| = [32m1.139170e-05[39m
+ 4 Picard |R| = [32m1.706811e-07[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 37, time = 15403.4, dt = 3081.49
+
+[35mInitial fixed point residual norm: [39m3.334430e-01[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 37, time = 15403.4, dt = 3081.49
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m3.345461e-01[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 38.18 s[39m] [[33m  284 MB[39m]
+
+
+ 0 Picard |R| = [32m3.334430e-01[39m
+ 1 Picard |R| = [31m3.345461e-01[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 37, time = 15403.4, dt = 3081.49
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m8.371770e-04[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 20.91 s[39m] [[33m  284 MB[39m]
+
+
+ 0 Picard |R| = [32m3.334430e-01[39m
+ 1 Picard |R| = [31m3.345461e-01[39m
+ 2 Picard |R| = [32m8.371770e-04[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 37, time = 15403.4, dt = 3081.49
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.268183e-05[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 10.50 s[39m] [[33m  284 MB[39m]
+
+
+ 0 Picard |R| = [32m3.334430e-01[39m
+ 1 Picard |R| = [31m3.345461e-01[39m
+ 2 Picard |R| = [32m8.371770e-04[39m
+ 3 Picard |R| = [32m1.268183e-05[39m
+
+[35mBeginning fixed point iteration 3[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 37, time = 15403.4, dt = 3081.49
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.890824e-07[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m3.334430e-01[39m
+ 1 Picard |R| = [31m3.345461e-01[39m
+ 2 Picard |R| = [32m8.371770e-04[39m
+ 3 Picard |R| = [32m1.268183e-05[39m
+ 4 Picard |R| = [32m1.890824e-07[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 38, time = 19255.3, dt = 3851.86
+
+[35mInitial fixed point residual norm: [39m3.150551e-01[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 38, time = 19255.3, dt = 3851.86
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m3.161021e-01[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 34.49 s[39m] [[33m  284 MB[39m]
+
+
+ 0 Picard |R| = [32m3.150551e-01[39m
+ 1 Picard |R| = [31m3.161021e-01[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 38, time = 19255.3, dt = 3851.86
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m9.212346e-04[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 20.02 s[39m] [[33m  285 MB[39m]
+
+
+ 0 Picard |R| = [32m3.150551e-01[39m
+ 1 Picard |R| = [31m3.161021e-01[39m
+ 2 Picard |R| = [32m9.212346e-04[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 38, time = 19255.3, dt = 3851.86
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.385597e-05[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 11.40 s[39m] [[33m  285 MB[39m]
+
+
+ 0 Picard |R| = [32m3.150551e-01[39m
+ 1 Picard |R| = [31m3.161021e-01[39m
+ 2 Picard |R| = [32m9.212346e-04[39m
+ 3 Picard |R| = [32m1.385597e-05[39m
+
+[35mBeginning fixed point iteration 3[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 38, time = 19255.3, dt = 3851.86
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.050690e-07[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m3.150551e-01[39m
+ 1 Picard |R| = [31m3.161021e-01[39m
+ 2 Picard |R| = [32m9.212346e-04[39m
+ 3 Picard |R| = [32m1.385597e-05[39m
+ 4 Picard |R| = [32m2.050690e-07[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 39, time = 24070.1, dt = 4814.82
+
+[35mInitial fixed point residual norm: [39m2.944436e-01[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 39, time = 24070.1, dt = 4814.82
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.954247e-01[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 31.50 s[39m] [[33m  285 MB[39m]
+
+
+ 0 Picard |R| = [32m2.944436e-01[39m
+ 1 Picard |R| = [31m2.954247e-01[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 39, time = 24070.1, dt = 4814.82
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.000498e-03[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 21.38 s[39m] [[33m  286 MB[39m]
+
+
+ 0 Picard |R| = [32m2.944436e-01[39m
+ 1 Picard |R| = [31m2.954247e-01[39m
+ 2 Picard |R| = [32m1.000498e-03[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 39, time = 24070.1, dt = 4814.82
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.491711e-05[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 10.17 s[39m] [[33m  286 MB[39m]
+
+
+ 0 Picard |R| = [32m2.944436e-01[39m
+ 1 Picard |R| = [31m2.954247e-01[39m
+ 2 Picard |R| = [32m1.000498e-03[39m
+ 3 Picard |R| = [32m1.491711e-05[39m
+
+[35mBeginning fixed point iteration 3[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 39, time = 24070.1, dt = 4814.82
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.187991e-07[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m2.944436e-01[39m
+ 1 Picard |R| = [31m2.954247e-01[39m
+ 2 Picard |R| = [32m1.000498e-03[39m
+ 3 Picard |R| = [32m1.491711e-05[39m
+ 4 Picard |R| = [32m2.187991e-07[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 40, time = 30088.7, dt = 6018.53
+
+[35mInitial fixed point residual norm: [39m2.724534e-01[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 40, time = 30088.7, dt = 6018.53
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.733557e-01[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 33.42 s[39m] [[33m  287 MB[39m]
+
+
+ 0 Picard |R| = [32m2.724534e-01[39m
+ 1 Picard |R| = [31m2.733557e-01[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 40, time = 30088.7, dt = 6018.53
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.076245e-03[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 17.25 s[39m] [[33m  287 MB[39m]
+
+
+ 0 Picard |R| = [32m2.724534e-01[39m
+ 1 Picard |R| = [31m2.733557e-01[39m
+ 2 Picard |R| = [32m1.076245e-03[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 40, time = 30088.7, dt = 6018.53
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.589278e-05[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m  7.18 s[39m] [[33m  287 MB[39m]
+
+
+ 0 Picard |R| = [32m2.724534e-01[39m
+ 1 Picard |R| = [31m2.733557e-01[39m
+ 2 Picard |R| = [32m1.076245e-03[39m
+ 3 Picard |R| = [32m1.589278e-05[39m
+
+[35mBeginning fixed point iteration 3[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 40, time = 30088.7, dt = 6018.53
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.314662e-07[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m2.724534e-01[39m
+ 1 Picard |R| = [31m2.733557e-01[39m
+ 2 Picard |R| = [32m1.076245e-03[39m
+ 3 Picard |R| = [32m1.589278e-05[39m
+ 4 Picard |R| = [32m2.314662e-07[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 41, time = 37611.8, dt = 7523.16
+
+[35mInitial fixed point residual norm: [39m2.504362e-01[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 41, time = 37611.8, dt = 7523.16
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.512432e-01[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 35.50 s[39m] [[33m  288 MB[39m]
+
+
+ 0 Picard |R| = [32m2.504362e-01[39m
+ 1 Picard |R| = [31m2.512432e-01[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 41, time = 37611.8, dt = 7523.16
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.150101e-03[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 17.59 s[39m] [[33m  288 MB[39m]
+
+
+ 0 Picard |R| = [32m2.504362e-01[39m
+ 1 Picard |R| = [31m2.512432e-01[39m
+ 2 Picard |R| = [32m1.150101e-03[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 41, time = 37611.8, dt = 7523.16
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.681463e-05[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m  6.98 s[39m] [[33m  288 MB[39m]
+
+
+ 0 Picard |R| = [32m2.504362e-01[39m
+ 1 Picard |R| = [31m2.512432e-01[39m
+ 2 Picard |R| = [32m1.150101e-03[39m
+ 3 Picard |R| = [32m1.681463e-05[39m
+
+[35mBeginning fixed point iteration 3[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 41, time = 37611.8, dt = 7523.16
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.422918e-07[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m2.504362e-01[39m
+ 1 Picard |R| = [31m2.512432e-01[39m
+ 2 Picard |R| = [32m1.150101e-03[39m
+ 3 Picard |R| = [32m1.681463e-05[39m
+ 4 Picard |R| = [32m2.422918e-07[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 42, time = 47015.8, dt = 9403.95
+
+[35mInitial fixed point residual norm: [39m2.300108e-01[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+
+
+[33m
+*** Warning ***
+The following warning occurred in the object "pipe_mw", of type "TransientMultiApp".
+
+The target time (time a multiapp must reach at the end of the time step) is desynchronized between this app and subapp 0.
+ If this is desired: use the 'global_time_offset' multiapp parameter to declare a constant offset
+If the apps should (eventually) be synchronized in time, please either: 
+  - match the 'start_time' in the main app and the multiapp, in the Executioner block
+  - set 'sub_cycling' to true in the multiapp parameters
+This message will only print once for all apps and all time steps.[39m
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 42, time = 47015.8, dt = 9403.95
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.307036e-01[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 34.05 s[39m] [[33m  290 MB[39m]
+
+
+ 0 Picard |R| = [32m2.300108e-01[39m
+ 1 Picard |R| = [31m2.307036e-01[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 42, time = 47015.8, dt = 9403.95
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.222460e-03[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 19.08 s[39m] [[33m  290 MB[39m]
+
+
+ 0 Picard |R| = [32m2.300108e-01[39m
+ 1 Picard |R| = [31m2.307036e-01[39m
+ 2 Picard |R| = [32m1.222460e-03[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 42, time = 47015.8, dt = 9403.95
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.769735e-05[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m  7.55 s[39m] [[33m  291 MB[39m]
+
+
+ 0 Picard |R| = [32m2.300108e-01[39m
+ 1 Picard |R| = [31m2.307036e-01[39m
+ 2 Picard |R| = [32m1.222460e-03[39m
+ 3 Picard |R| = [32m1.769735e-05[39m
+
+[35mBeginning fixed point iteration 3[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 42, time = 47015.8, dt = 9403.95
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.523172e-07[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m2.300108e-01[39m
+ 1 Picard |R| = [31m2.307036e-01[39m
+ 2 Picard |R| = [32m1.222460e-03[39m
+ 3 Picard |R| = [32m1.769735e-05[39m
+ 4 Picard |R| = [32m2.523172e-07[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 43, time = 58770.7, dt = 11754.9
+
+[35mInitial fixed point residual norm: [39m2.124767e-01[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 43, time = 58770.7, dt = 11754.9
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.130392e-01[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 31.83 s[39m] [[33m  292 MB[39m]
+
+
+ 0 Picard |R| = [32m2.124767e-01[39m
+ 1 Picard |R| = [31m2.130392e-01[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 43, time = 58770.7, dt = 11754.9
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.292059e-03[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 18.49 s[39m] [[33m  292 MB[39m]
+
+
+ 0 Picard |R| = [32m2.124767e-01[39m
+ 1 Picard |R| = [31m2.130392e-01[39m
+ 2 Picard |R| = [32m1.292059e-03[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 43, time = 58770.7, dt = 11754.9
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.853107e-05[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m  7.40 s[39m] [[33m  292 MB[39m]
+
+
+ 0 Picard |R| = [32m2.124767e-01[39m
+ 1 Picard |R| = [31m2.130392e-01[39m
+ 2 Picard |R| = [32m1.292059e-03[39m
+ 3 Picard |R| = [32m1.853107e-05[39m
+
+[35mBeginning fixed point iteration 3[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 43, time = 58770.7, dt = 11754.9
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.615221e-07[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m2.124767e-01[39m
+ 1 Picard |R| = [31m2.130392e-01[39m
+ 2 Picard |R| = [32m1.292059e-03[39m
+ 3 Picard |R| = [32m1.853107e-05[39m
+ 4 Picard |R| = [32m2.615221e-07[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 44, time = 73464.4, dt = 14693.7
+
+[35mInitial fixed point residual norm: [39m1.981087e-01[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 44, time = 73464.4, dt = 14693.7
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.985351e-01[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 31.08 s[39m] [[33m  293 MB[39m]
+
+
+ 0 Picard |R| = [32m1.981087e-01[39m
+ 1 Picard |R| = [31m1.985351e-01[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 44, time = 73464.4, dt = 14693.7
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.357875e-03[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 20.14 s[39m] [[33m  294 MB[39m]
+
+
+ 0 Picard |R| = [32m1.981087e-01[39m
+ 1 Picard |R| = [31m1.985351e-01[39m
+ 2 Picard |R| = [32m1.357875e-03[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 44, time = 73464.4, dt = 14693.7
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.930894e-05[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m  6.87 s[39m] [[33m  294 MB[39m]
+
+
+ 0 Picard |R| = [32m1.981087e-01[39m
+ 1 Picard |R| = [31m1.985351e-01[39m
+ 2 Picard |R| = [32m1.357875e-03[39m
+ 3 Picard |R| = [32m1.930894e-05[39m
+
+[35mBeginning fixed point iteration 3[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 44, time = 73464.4, dt = 14693.7
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.699221e-07[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m1.981087e-01[39m
+ 1 Picard |R| = [31m1.985351e-01[39m
+ 2 Picard |R| = [32m1.357875e-03[39m
+ 3 Picard |R| = [32m1.930894e-05[39m
+ 4 Picard |R| = [32m2.699221e-07[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 45, time = 91831.5, dt = 18367.1
+
+[35mInitial fixed point residual norm: [39m1.859565e-01[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 45, time = 91831.5, dt = 18367.1
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.862563e-01[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 31.54 s[39m] [[33m  295 MB[39m]
+
+
+ 0 Picard |R| = [32m1.859565e-01[39m
+ 1 Picard |R| = [31m1.862563e-01[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 45, time = 91831.5, dt = 18367.1
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.421918e-03[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 14.00 s[39m] [[33m  296 MB[39m]
+
+
+ 0 Picard |R| = [32m1.859565e-01[39m
+ 1 Picard |R| = [31m1.862563e-01[39m
+ 2 Picard |R| = [32m1.421918e-03[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 45, time = 91831.5, dt = 18367.1
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.006626e-05[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m  7.42 s[39m] [[33m  296 MB[39m]
+
+
+ 0 Picard |R| = [32m1.859565e-01[39m
+ 1 Picard |R| = [31m1.862563e-01[39m
+ 2 Picard |R| = [32m1.421918e-03[39m
+ 3 Picard |R| = [32m2.006626e-05[39m
+
+[35mBeginning fixed point iteration 3[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 45, time = 91831.5, dt = 18367.1
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.778911e-07[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m1.859565e-01[39m
+ 1 Picard |R| = [31m1.862563e-01[39m
+ 2 Picard |R| = [32m1.421918e-03[39m
+ 3 Picard |R| = [32m2.006626e-05[39m
+ 4 Picard |R| = [32m2.778911e-07[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 46, time = 114790, dt = 22958.9
+
+[35mInitial fixed point residual norm: [39m1.745573e-01[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 46, time = 114790, dt = 22958.9
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.747519e-01[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 31.30 s[39m] [[33m  297 MB[39m]
+
+
+ 0 Picard |R| = [32m1.745573e-01[39m
+ 1 Picard |R| = [31m1.747519e-01[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 46, time = 114790, dt = 22958.9
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.489573e-03[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 14.35 s[39m] [[33m  298 MB[39m]
+
+
+ 0 Picard |R| = [32m1.745573e-01[39m
+ 1 Picard |R| = [31m1.747519e-01[39m
+ 2 Picard |R| = [32m1.489573e-03[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 46, time = 114790, dt = 22958.9
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.088273e-05[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m  7.12 s[39m] [[33m  298 MB[39m]
+
+
+ 0 Picard |R| = [32m1.745573e-01[39m
+ 1 Picard |R| = [31m1.747519e-01[39m
+ 2 Picard |R| = [32m1.489573e-03[39m
+ 3 Picard |R| = [32m2.088273e-05[39m
+
+[35mBeginning fixed point iteration 3[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 46, time = 114790, dt = 22958.9
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.870401e-07[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m1.745573e-01[39m
+ 1 Picard |R| = [31m1.747519e-01[39m
+ 2 Picard |R| = [32m1.489573e-03[39m
+ 3 Picard |R| = [32m2.088273e-05[39m
+ 4 Picard |R| = [32m2.870401e-07[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 47, time = 143489, dt = 28698.6
+
+[35mInitial fixed point residual norm: [39m1.630192e-01[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 47, time = 143489, dt = 28698.6
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.631355e-01[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 33.43 s[39m] [[33m  300 MB[39m]
+
+
+ 0 Picard |R| = [32m1.630192e-01[39m
+ 1 Picard |R| = [31m1.631355e-01[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 47, time = 143489, dt = 28698.6
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.566825e-03[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 15.10 s[39m] [[33m  301 MB[39m]
+
+
+ 0 Picard |R| = [32m1.630192e-01[39m
+ 1 Picard |R| = [31m1.631355e-01[39m
+ 2 Picard |R| = [32m1.566825e-03[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 47, time = 143489, dt = 28698.6
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.184586e-05[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m  7.32 s[39m] [[33m  301 MB[39m]
+
+
+ 0 Picard |R| = [32m1.630192e-01[39m
+ 1 Picard |R| = [31m1.631355e-01[39m
+ 2 Picard |R| = [32m1.566825e-03[39m
+ 3 Picard |R| = [32m2.184586e-05[39m
+
+[35mBeginning fixed point iteration 3[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 47, time = 143489, dt = 28698.6
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.973754e-07[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m1.630192e-01[39m
+ 1 Picard |R| = [31m1.631355e-01[39m
+ 2 Picard |R| = [32m1.566825e-03[39m
+ 3 Picard |R| = [32m2.184586e-05[39m
+ 4 Picard |R| = [32m2.973754e-07[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 48, time = 179362, dt = 35873.2
+
+[35mInitial fixed point residual norm: [39m1.514622e-01[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 48, time = 179362, dt = 35873.2
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.515259e-01[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 31.28 s[39m] [[33m  302 MB[39m]
+
+
+ 0 Picard |R| = [32m1.514622e-01[39m
+ 1 Picard |R| = [31m1.515259e-01[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 48, time = 179362, dt = 35873.2
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.658124e-03[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 14.90 s[39m] [[33m  302 MB[39m]
+
+
+ 0 Picard |R| = [32m1.514622e-01[39m
+ 1 Picard |R| = [31m1.515259e-01[39m
+ 2 Picard |R| = [32m1.658124e-03[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 48, time = 179362, dt = 35873.2
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.302046e-05[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m  7.71 s[39m] [[33m  303 MB[39m]
+
+
+ 0 Picard |R| = [32m1.514622e-01[39m
+ 1 Picard |R| = [31m1.515259e-01[39m
+ 2 Picard |R| = [32m1.658124e-03[39m
+ 3 Picard |R| = [32m2.302046e-05[39m
+
+[35mBeginning fixed point iteration 3[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 48, time = 179362, dt = 35873.2
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m3.126303e-07[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m1.514622e-01[39m
+ 1 Picard |R| = [31m1.515259e-01[39m
+ 2 Picard |R| = [32m1.658124e-03[39m
+ 3 Picard |R| = [32m2.302046e-05[39m
+ 4 Picard |R| = [32m3.126303e-07[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 49, time = 224204, dt = 44841.6
+
+[35mInitial fixed point residual norm: [39m1.404956e-01[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 49, time = 224204, dt = 44841.6
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.405276e-01[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 31.56 s[39m] [[33m  305 MB[39m]
+
+
+ 0 Picard |R| = [32m1.404956e-01[39m
+ 1 Picard |R| = [31m1.405276e-01[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 49, time = 224204, dt = 44841.6
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.766857e-03[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 15.57 s[39m] [[33m  305 MB[39m]
+
+
+ 0 Picard |R| = [32m1.404956e-01[39m
+ 1 Picard |R| = [31m1.405276e-01[39m
+ 2 Picard |R| = [32m1.766857e-03[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 49, time = 224204, dt = 44841.6
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.445675e-05[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m  8.43 s[39m] [[33m  306 MB[39m]
+
+
+ 0 Picard |R| = [32m1.404956e-01[39m
+ 1 Picard |R| = [31m1.405276e-01[39m
+ 2 Picard |R| = [32m1.766857e-03[39m
+ 3 Picard |R| = [32m2.445675e-05[39m
+
+[35mBeginning fixed point iteration 3[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 49, time = 224204, dt = 44841.6
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m3.304887e-07[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m1.404956e-01[39m
+ 1 Picard |R| = [31m1.405276e-01[39m
+ 2 Picard |R| = [32m1.766857e-03[39m
+ 3 Picard |R| = [32m2.445675e-05[39m
+ 4 Picard |R| = [32m3.304887e-07[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 50, time = 280256, dt = 56051.9
+
+[35mInitial fixed point residual norm: [39m1.304569e-01[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 50, time = 280256, dt = 56051.9
+[36mpipe_mw0: [39m 0 Nonlinear |R| = [32m5.637147e-05[39m
+[36mpipe_mw0: [39m 1 Nonlinear |R| = [31m7.425789e-04[39m
+[36mpipe_mw0: [39m 2 Nonlinear |R| = [32m2.852689e-06[39m
+[36mpipe_mw0: [39m 3 Nonlinear |R| = [32m9.531970e-09[39m
+[36mpipe_mw0: [39m 4 Nonlinear |R| = [32m2.713670e-11[39m
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.304720e-01[39m
+
+
+[35m
+Main app solve:[39m
+
+ 0 Nonlinear |R| = [32m1.304720e-01[39m
+ 1 Nonlinear |R| = [32m2.172431e-02[39m
+ 2 Nonlinear |R| = [32m2.024190e-04[39m
+ 3 Nonlinear |R| = [32m3.619798e-05[39m
+ 4 Nonlinear |R| = [32m8.302059e-06[39m
+ 5 Nonlinear |R| = [32m2.211982e-06[39m
+ 6 Nonlinear |R| = [32m6.308565e-07[39m
+ 7 Nonlinear |R| = [32m1.854303e-07[39m
+ 8 Nonlinear |R| = [32m5.550667e-08[39m
+ 9 Nonlinear |R| = [32m1.693955e-08[39m
+10 Nonlinear |R| = [32m5.311825e-09[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 37.88 s[39m] [[33m  307 MB[39m]
+
+
+ 0 Picard |R| = [32m1.304569e-01[39m
+ 1 Picard |R| = [31m1.304720e-01[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 50, time = 280256, dt = 56051.9
+[36mpipe_mw0: [39m 0 Nonlinear |R| = [32m1.248745e-01[39m
+[36mpipe_mw0: [39m 1 Nonlinear |R| = [32m9.411819e-04[39m
+[36mpipe_mw0: [39m 2 Nonlinear |R| = [32m9.144679e-06[39m
+[36mpipe_mw0: [39m 3 Nonlinear |R| = [32m1.384567e-08[39m
+[36mpipe_mw0: [39m 4 Nonlinear |R| = [32m1.349603e-10[39m
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.897321e-03[39m
+
+
+[35m
+Main app solve:[39m
+
+ 0 Nonlinear |R| = [32m1.897321e-03[39m
+ 1 Nonlinear |R| = [32m4.159722e-06[39m
+ 2 Nonlinear |R| = [32m3.402176e-07[39m
+ 3 Nonlinear |R| = [32m4.593403e-08[39m
+ 4 Nonlinear |R| = [32m7.747709e-09[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 14.96 s[39m] [[33m  307 MB[39m]
+
+
+ 0 Picard |R| = [32m1.304569e-01[39m
+ 1 Picard |R| = [31m1.304720e-01[39m
+ 2 Picard |R| = [32m1.897321e-03[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 50, time = 280256, dt = 56051.9
+[36mpipe_mw0: [39m 0 Nonlinear |R| = [32m1.861067e-03[39m
+[36mpipe_mw0: [39m 1 Nonlinear |R| = [32m6.707353e-06[39m
+[36mpipe_mw0: [39m 2 Nonlinear |R| = [32m2.243744e-08[39m
+[36mpipe_mw0: [39m 3 Nonlinear |R| = [32m5.712927e-11[39m
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.621810e-05[39m
+
+
+[35m
+Main app solve:[39m
+
+ 0 Nonlinear |R| = [32m2.621810e-05[39m
+ 1 Nonlinear |R| = [32m5.378029e-08[39m
+ 2 Nonlinear |R| = [32m4.464250e-09[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m  7.90 s[39m] [[33m  308 MB[39m]
+
+
+ 0 Picard |R| = [32m1.304569e-01[39m
+ 1 Picard |R| = [31m1.304720e-01[39m
+ 2 Picard |R| = [32m1.897321e-03[39m
+ 3 Picard |R| = [32m2.621810e-05[39m
+
+[35mBeginning fixed point iteration 3[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 50, time = 280256, dt = 56051.9
+[36mpipe_mw0: [39m 0 Nonlinear |R| = [32m2.550168e-05[39m
+[36mpipe_mw0: [39m 1 Nonlinear |R| = [32m9.157747e-08[39m
+[36mpipe_mw0: [39m 2 Nonlinear |R| = [32m2.961712e-10[39m
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m3.537497e-07[39m
+
+
+[35m
+Main app solve:[39m
+
+ 0 Nonlinear |R| = [32m3.537497e-07[39m
+ 1 Nonlinear |R| = [32m5.244558e-10[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m1.304569e-01[39m
+ 1 Picard |R| = [31m1.304720e-01[39m
+ 2 Picard |R| = [32m1.897321e-03[39m
+ 3 Picard |R| = [32m2.621810e-05[39m
+ 4 Picard |R| = [32m3.537497e-07[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mOutlier Variable Residual Norms:
+[36mpipe_mw0: [39m  p: [31m2.925753e-10[39m
+
+Time Step 51, time = 350321, dt = 70064.9
+
+[35mInitial fixed point residual norm: [39m1.212644e-01[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 51, time = 350321, dt = 70064.9
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.212714e-01[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 53.46 s[39m] [[33m  310 MB[39m]
+
+
+ 0 Picard |R| = [32m1.212644e-01[39m
+ 1 Picard |R| = [31m1.212714e-01[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 51, time = 350321, dt = 70064.9
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.061188e-03[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 20.97 s[39m] [[33m  310 MB[39m]
+
+
+ 0 Picard |R| = [32m1.212644e-01[39m
+ 1 Picard |R| = [31m1.212714e-01[39m
+ 2 Picard |R| = [32m2.061188e-03[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 51, time = 350321, dt = 70064.9
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.846967e-05[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m  8.52 s[39m] [[33m  310 MB[39m]
+
+
+ 0 Picard |R| = [32m1.212644e-01[39m
+ 1 Picard |R| = [31m1.212714e-01[39m
+ 2 Picard |R| = [32m2.061188e-03[39m
+ 3 Picard |R| = [32m2.846967e-05[39m
+
+[35mBeginning fixed point iteration 3[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 51, time = 350321, dt = 70064.9
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m3.836342e-07[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m1.212644e-01[39m
+ 1 Picard |R| = [31m1.212714e-01[39m
+ 2 Picard |R| = [32m2.061188e-03[39m
+ 3 Picard |R| = [32m2.846967e-05[39m
+ 4 Picard |R| = [32m3.836342e-07[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 52, time = 437902, dt = 87581.2
+
+[35mInitial fixed point residual norm: [39m1.127688e-01[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 52, time = 437902, dt = 87581.2
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.127725e-01[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m107.57 s[39m] [[33m  314 MB[39m]
+
+
+ 0 Picard |R| = [32m1.127688e-01[39m
+ 1 Picard |R| = [31m1.127725e-01[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 52, time = 437902, dt = 87581.2
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.294984e-03[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 30.11 s[39m] [[33m  314 MB[39m]
+
+
+ 0 Picard |R| = [32m1.127688e-01[39m
+ 1 Picard |R| = [31m1.127725e-01[39m
+ 2 Picard |R| = [32m2.294984e-03[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 52, time = 437902, dt = 87581.2
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m3.172111e-05[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 12.78 s[39m] [[33m  314 MB[39m]
+
+
+ 0 Picard |R| = [32m1.127688e-01[39m
+ 1 Picard |R| = [31m1.127725e-01[39m
+ 2 Picard |R| = [32m2.294984e-03[39m
+ 3 Picard |R| = [32m3.172111e-05[39m
+
+[35mBeginning fixed point iteration 3[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 52, time = 437902, dt = 87581.2
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m4.272431e-07[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m1.127688e-01[39m
+ 1 Picard |R| = [31m1.127725e-01[39m
+ 2 Picard |R| = [32m2.294984e-03[39m
+ 3 Picard |R| = [32m3.172111e-05[39m
+ 4 Picard |R| = [32m4.272431e-07[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 53, time = 547378, dt = 109476
+
+[35mInitial fixed point residual norm: [39m1.049535e-01[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 53, time = 547378, dt = 109476
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.049558e-01[39m
+[35m
+Main app solve:[39m
+Nonlinear solve did not converge due to DIVERGED_MAX_IT iterations 100
+
+[31m Solve Did NOT Converge![39m
+
+  Finished Solving                                                                       [[33m498.90 s[39m] [[33m  271 MB[39m]
+
+Fixed point convergence reason: DIVERGED_NONLINEAR
+
+Aborting as solve did not converge
+
+
+Solve failed, cutting timestep.
+
+
+Time Step 53, time = 492640, dt = 54738.2
+
+[35mInitial fixed point residual norm: [39m1.049535e-01[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 53, time = 492640, dt = 54738.2
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.049544e-01[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 49.91 s[39m] [[33m  274 MB[39m]
+
+
+ 0 Picard |R| = [32m1.049535e-01[39m
+ 1 Picard |R| = [31m1.049544e-01[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 53, time = 492640, dt = 54738.2
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.336058e-03[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 19.11 s[39m] [[33m  274 MB[39m]
+
+
+ 0 Picard |R| = [32m1.049535e-01[39m
+ 1 Picard |R| = [31m1.049544e-01[39m
+ 2 Picard |R| = [32m1.336058e-03[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 53, time = 492640, dt = 54738.2
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.868068e-05[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m  7.57 s[39m] [[33m  275 MB[39m]
+
+
+ 0 Picard |R| = [32m1.049535e-01[39m
+ 1 Picard |R| = [31m1.049544e-01[39m
+ 2 Picard |R| = [32m1.336058e-03[39m
+ 3 Picard |R| = [32m1.868068e-05[39m
+
+[35mBeginning fixed point iteration 3[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 53, time = 492640, dt = 54738.2
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.545925e-07[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m1.049535e-01[39m
+ 1 Picard |R| = [31m1.049544e-01[39m
+ 2 Picard |R| = [32m1.336058e-03[39m
+ 3 Picard |R| = [32m1.868068e-05[39m
+ 4 Picard |R| = [32m2.545925e-07[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 54, time = 547378, dt = 54738.2
+
+[35mInitial fixed point residual norm: [39m1.014771e-01[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 54, time = 547378, dt = 54738.2
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.014777e-01[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 53.67 s[39m] [[33m  275 MB[39m]
+
+
+ 0 Picard |R| = [32m1.014771e-01[39m
+ 1 Picard |R| = [31m1.014777e-01[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 54, time = 547378, dt = 54738.2
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.300581e-03[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 25.20 s[39m] [[33m  275 MB[39m]
+
+
+ 0 Picard |R| = [32m1.014771e-01[39m
+ 1 Picard |R| = [31m1.014777e-01[39m
+ 2 Picard |R| = [32m1.300581e-03[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 54, time = 547378, dt = 54738.2
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.824172e-05[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m  8.29 s[39m] [[33m  275 MB[39m]
+
+
+ 0 Picard |R| = [32m1.014771e-01[39m
+ 1 Picard |R| = [31m1.014777e-01[39m
+ 2 Picard |R| = [32m1.300581e-03[39m
+ 3 Picard |R| = [32m1.824172e-05[39m
+
+[35mBeginning fixed point iteration 3[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 54, time = 547378, dt = 54738.2
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.493327e-07[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m1.014771e-01[39m
+ 1 Picard |R| = [31m1.014777e-01[39m
+ 2 Picard |R| = [32m1.300581e-03[39m
+ 3 Picard |R| = [32m1.824172e-05[39m
+ 4 Picard |R| = [32m2.493327e-07[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 55, time = 615801, dt = 68422.8
+
+[35mInitial fixed point residual norm: [39m9.858802e-02[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 55, time = 615801, dt = 68422.8
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m9.858861e-02[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 80.18 s[39m] [[33m  276 MB[39m]
+
+
+ 0 Picard |R| = [32m9.858802e-02[39m
+ 1 Picard |R| = [31m9.858861e-02[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 55, time = 615801, dt = 68422.8
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.632673e-03[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 29.42 s[39m] [[33m  276 MB[39m]
+
+
+ 0 Picard |R| = [32m9.858802e-02[39m
+ 1 Picard |R| = [31m9.858861e-02[39m
+ 2 Picard |R| = [32m1.632673e-03[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 55, time = 615801, dt = 68422.8
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.291896e-05[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 12.26 s[39m] [[33m  276 MB[39m]
+
+
+ 0 Picard |R| = [32m9.858802e-02[39m
+ 1 Picard |R| = [31m9.858861e-02[39m
+ 2 Picard |R| = [32m1.632673e-03[39m
+ 3 Picard |R| = [32m2.291896e-05[39m
+
+[35mBeginning fixed point iteration 3[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 55, time = 615801, dt = 68422.8
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m3.128315e-07[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m9.858802e-02[39m
+ 1 Picard |R| = [31m9.858861e-02[39m
+ 2 Picard |R| = [32m1.632673e-03[39m
+ 3 Picard |R| = [32m2.291896e-05[39m
+ 4 Picard |R| = [32m3.128315e-07[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 56, time = 701329, dt = 85528.5
+
+[35mInitial fixed point residual norm: [39m9.550765e-02[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 56, time = 701329, dt = 85528.5
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m9.550828e-02[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m167.73 s[39m] [[33m  277 MB[39m]
+
+
+ 0 Picard |R| = [32m9.550765e-02[39m
+ 1 Picard |R| = [31m9.550828e-02[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 56, time = 701329, dt = 85528.5
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.133245e-03[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 39.46 s[39m] [[33m  277 MB[39m]
+
+
+ 0 Picard |R| = [32m9.550765e-02[39m
+ 1 Picard |R| = [31m9.550828e-02[39m
+ 2 Picard |R| = [32m2.133245e-03[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 56, time = 701329, dt = 85528.5
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.999572e-05[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 18.25 s[39m] [[33m  277 MB[39m]
+
+
+ 0 Picard |R| = [32m9.550765e-02[39m
+ 1 Picard |R| = [31m9.550828e-02[39m
+ 2 Picard |R| = [32m2.133245e-03[39m
+ 3 Picard |R| = [32m2.999572e-05[39m
+
+[35mBeginning fixed point iteration 3[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 56, time = 701329, dt = 85528.5
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m4.106184e-07[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m9.550765e-02[39m
+ 1 Picard |R| = [31m9.550828e-02[39m
+ 2 Picard |R| = [32m2.133245e-03[39m
+ 3 Picard |R| = [32m2.999572e-05[39m
+ 4 Picard |R| = [32m4.106184e-07[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 57, time = 808240, dt = 106911
+
+[35mInitial fixed point residual norm: [39m9.232932e-02[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 57, time = 808240, dt = 106911
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m9.233001e-02[39m
+[35m
+Main app solve:[39m
+Nonlinear solve did not converge due to DIVERGED_MAX_IT iterations 100
+
+[31m Solve Did NOT Converge![39m
+
+  Finished Solving                                                                       [[33m457.78 s[39m] [[33m  283 MB[39m]
+
+Fixed point convergence reason: DIVERGED_NONLINEAR
+
+Aborting as solve did not converge
+
+
+Solve failed, cutting timestep.
+
+
+Time Step 57, time = 754785, dt = 53455.3
+
+[35mInitial fixed point residual norm: [39m9.232932e-02[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 57, time = 754785, dt = 53455.3
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m9.232954e-02[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 58.10 s[39m] [[33m  283 MB[39m]
+
+
+ 0 Picard |R| = [32m9.232932e-02[39m
+ 1 Picard |R| = [31m9.232954e-02[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 57, time = 754785, dt = 53455.3
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.377792e-03[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 22.56 s[39m] [[33m  283 MB[39m]
+
+
+ 0 Picard |R| = [32m9.232932e-02[39m
+ 1 Picard |R| = [31m9.232954e-02[39m
+ 2 Picard |R| = [32m1.377792e-03[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 57, time = 754785, dt = 53455.3
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.959325e-05[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 11.68 s[39m] [[33m  283 MB[39m]
+
+
+ 0 Picard |R| = [32m9.232932e-02[39m
+ 1 Picard |R| = [31m9.232954e-02[39m
+ 2 Picard |R| = [32m1.377792e-03[39m
+ 3 Picard |R| = [32m1.959325e-05[39m
+
+[35mBeginning fixed point iteration 3[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 57, time = 754785, dt = 53455.3
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.712640e-07[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m9.232932e-02[39m
+ 1 Picard |R| = [31m9.232954e-02[39m
+ 2 Picard |R| = [32m1.377792e-03[39m
+ 3 Picard |R| = [32m1.959325e-05[39m
+ 4 Picard |R| = [32m2.712640e-07[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 58, time = 808240, dt = 53455.3
+
+[35mInitial fixed point residual norm: [39m9.085885e-02[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 58, time = 808240, dt = 53455.3
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m9.085904e-02[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 59.37 s[39m] [[33m  283 MB[39m]
+
+
+ 0 Picard |R| = [32m9.085885e-02[39m
+ 1 Picard |R| = [31m9.085904e-02[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 58, time = 808240, dt = 53455.3
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.448766e-03[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 23.79 s[39m] [[33m  283 MB[39m]
+
+
+ 0 Picard |R| = [32m9.085885e-02[39m
+ 1 Picard |R| = [31m9.085904e-02[39m
+ 2 Picard |R| = [32m1.448766e-03[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 58, time = 808240, dt = 53455.3
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.068784e-05[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 12.04 s[39m] [[33m  283 MB[39m]
+
+
+ 0 Picard |R| = [32m9.085885e-02[39m
+ 1 Picard |R| = [31m9.085904e-02[39m
+ 2 Picard |R| = [32m1.448766e-03[39m
+ 3 Picard |R| = [32m2.068784e-05[39m
+
+[35mBeginning fixed point iteration 3[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 58, time = 808240, dt = 53455.3
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.875690e-07[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m9.085885e-02[39m
+ 1 Picard |R| = [31m9.085904e-02[39m
+ 2 Picard |R| = [32m1.448766e-03[39m
+ 3 Picard |R| = [32m2.068784e-05[39m
+ 4 Picard |R| = [32m2.875690e-07[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 59, time = 875059, dt = 66819.1
+
+[35mInitial fixed point residual norm: [39m8.956000e-02[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 59, time = 875059, dt = 66819.1
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m8.956024e-02[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 91.70 s[39m] [[33m  284 MB[39m]
+
+
+ 0 Picard |R| = [32m8.956000e-02[39m
+ 1 Picard |R| = [31m8.956024e-02[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 59, time = 875059, dt = 66819.1
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.940812e-03[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 33.14 s[39m] [[33m  284 MB[39m]
+
+
+ 0 Picard |R| = [32m8.956000e-02[39m
+ 1 Picard |R| = [31m8.956024e-02[39m
+ 2 Picard |R| = [32m1.940812e-03[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 59, time = 875059, dt = 66819.1
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.778551e-05[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 16.20 s[39m] [[33m  284 MB[39m]
+
+
+ 0 Picard |R| = [32m8.956000e-02[39m
+ 1 Picard |R| = [31m8.956024e-02[39m
+ 2 Picard |R| = [32m1.940812e-03[39m
+ 3 Picard |R| = [32m2.778551e-05[39m
+
+[35mBeginning fixed point iteration 3[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 59, time = 875059, dt = 66819.1
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m3.870443e-07[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m8.956000e-02[39m
+ 1 Picard |R| = [31m8.956024e-02[39m
+ 2 Picard |R| = [32m1.940812e-03[39m
+ 3 Picard |R| = [32m2.778551e-05[39m
+ 4 Picard |R| = [32m3.870443e-07[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 60, time = 958583, dt = 83523.9
+
+[35mInitial fixed point residual norm: [39m8.799235e-02[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 60, time = 958583, dt = 83523.9
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m8.799265e-02[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m251.72 s[39m] [[33m  284 MB[39m]
+
+
+ 0 Picard |R| = [32m8.799235e-02[39m
+ 1 Picard |R| = [31m8.799265e-02[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 60, time = 958583, dt = 83523.9
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.622630e-03[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 46.52 s[39m] [[33m  284 MB[39m]
+
+
+ 0 Picard |R| = [32m8.799235e-02[39m
+ 1 Picard |R| = [31m8.799265e-02[39m
+ 2 Picard |R| = [32m2.622630e-03[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 60, time = 958583, dt = 83523.9
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m3.769867e-05[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 21.36 s[39m] [[33m  285 MB[39m]
+
+
+ 0 Picard |R| = [32m8.799235e-02[39m
+ 1 Picard |R| = [31m8.799265e-02[39m
+ 2 Picard |R| = [32m2.622630e-03[39m
+ 3 Picard |R| = [32m3.769867e-05[39m
+
+[35mBeginning fixed point iteration 3[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 60, time = 958583, dt = 83523.9
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m5.270114e-07[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m8.799235e-02[39m
+ 1 Picard |R| = [31m8.799265e-02[39m
+ 2 Picard |R| = [32m2.622630e-03[39m
+ 3 Picard |R| = [32m3.769867e-05[39m
+ 4 Picard |R| = [32m5.270114e-07[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 61, time = 1.06299e+06, dt = 104405
+
+[35mInitial fixed point residual norm: [39m8.592834e-02[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 61, time = 1.06299e+06, dt = 104405
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m8.592870e-02[39m
+[35m
+Main app solve:[39m
+Nonlinear solve did not converge due to DIVERGED_MAX_IT iterations 100
+
+[31m Solve Did NOT Converge![39m
+
+  Finished Solving                                                                       [[33m477.68 s[39m] [[33m  286 MB[39m]
+
+Fixed point convergence reason: DIVERGED_NONLINEAR
+
+Aborting as solve did not converge
+
+
+Solve failed, cutting timestep.
+
+
+Time Step 61, time = 1.01079e+06, dt = 52202.4
+
+[35mInitial fixed point residual norm: [39m8.592834e-02[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 61, time = 1.01079e+06, dt = 52202.4
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m8.592846e-02[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 61.30 s[39m] [[33m  286 MB[39m]
+
+
+ 0 Picard |R| = [32m8.592834e-02[39m
+ 1 Picard |R| = [31m8.592846e-02[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 61, time = 1.01079e+06, dt = 52202.4
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.700170e-03[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 27.06 s[39m] [[33m  286 MB[39m]
+
+
+ 0 Picard |R| = [32m8.592834e-02[39m
+ 1 Picard |R| = [31m8.592846e-02[39m
+ 2 Picard |R| = [32m1.700170e-03[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 61, time = 1.01079e+06, dt = 52202.4
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.475602e-05[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 11.62 s[39m] [[33m  286 MB[39m]
+
+
+ 0 Picard |R| = [32m8.592834e-02[39m
+ 1 Picard |R| = [31m8.592846e-02[39m
+ 2 Picard |R| = [32m1.700170e-03[39m
+ 3 Picard |R| = [32m2.475602e-05[39m
+
+[35mBeginning fixed point iteration 3[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 61, time = 1.01079e+06, dt = 52202.4
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m3.505777e-07[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m8.592834e-02[39m
+ 1 Picard |R| = [31m8.592846e-02[39m
+ 2 Picard |R| = [32m1.700170e-03[39m
+ 3 Picard |R| = [32m2.475602e-05[39m
+ 4 Picard |R| = [32m3.505777e-07[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 62, time = 1.06299e+06, dt = 52202.4
+
+[35mInitial fixed point residual norm: [39m8.466070e-02[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 62, time = 1.06299e+06, dt = 52202.4
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m8.466081e-02[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 67.10 s[39m] [[33m  286 MB[39m]
+
+
+ 0 Picard |R| = [32m8.466070e-02[39m
+ 1 Picard |R| = [31m8.466081e-02[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 62, time = 1.06299e+06, dt = 52202.4
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.753073e-03[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 27.40 s[39m] [[33m  286 MB[39m]
+
+
+ 0 Picard |R| = [32m8.466070e-02[39m
+ 1 Picard |R| = [31m8.466081e-02[39m
+ 2 Picard |R| = [32m1.753073e-03[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 62, time = 1.06299e+06, dt = 52202.4
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.566841e-05[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 11.73 s[39m] [[33m  286 MB[39m]
+
+
+ 0 Picard |R| = [32m8.466070e-02[39m
+ 1 Picard |R| = [31m8.466081e-02[39m
+ 2 Picard |R| = [32m1.753073e-03[39m
+ 3 Picard |R| = [32m2.566841e-05[39m
+
+[35mBeginning fixed point iteration 3[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 62, time = 1.06299e+06, dt = 52202.4
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m3.653977e-07[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m8.466070e-02[39m
+ 1 Picard |R| = [31m8.466081e-02[39m
+ 2 Picard |R| = [32m1.753073e-03[39m
+ 3 Picard |R| = [32m2.566841e-05[39m
+ 4 Picard |R| = [32m3.653977e-07[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 63, time = 1.12824e+06, dt = 65253
+
+[35mInitial fixed point residual norm: [39m8.321299e-02[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 63, time = 1.12824e+06, dt = 65253
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m8.321313e-02[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m119.14 s[39m] [[33m  287 MB[39m]
+
+
+ 0 Picard |R| = [32m8.321299e-02[39m
+ 1 Picard |R| = [31m8.321313e-02[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 63, time = 1.12824e+06, dt = 65253
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.237537e-03[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 31.99 s[39m] [[33m  287 MB[39m]
+
+
+ 0 Picard |R| = [32m8.321299e-02[39m
+ 1 Picard |R| = [31m8.321313e-02[39m
+ 2 Picard |R| = [32m2.237537e-03[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 63, time = 1.12824e+06, dt = 65253
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m3.289427e-05[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 16.49 s[39m] [[33m  287 MB[39m]
+
+
+ 0 Picard |R| = [32m8.321299e-02[39m
+ 1 Picard |R| = [31m8.321313e-02[39m
+ 2 Picard |R| = [32m2.237537e-03[39m
+ 3 Picard |R| = [32m3.289427e-05[39m
+
+[35mBeginning fixed point iteration 3[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 63, time = 1.12824e+06, dt = 65253
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m4.695594e-07[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m8.321299e-02[39m
+ 1 Picard |R| = [31m8.321313e-02[39m
+ 2 Picard |R| = [32m2.237537e-03[39m
+ 3 Picard |R| = [32m3.289427e-05[39m
+ 4 Picard |R| = [32m4.695594e-07[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 64, time = 1.20981e+06, dt = 81566.3
+
+[35mInitial fixed point residual norm: [39m8.100632e-02[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 64, time = 1.20981e+06, dt = 81566.3
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m8.100650e-02[39m
+[35m
+Main app solve:[39m
+Nonlinear solve did not converge due to DIVERGED_MAX_IT iterations 100
+
+[31m Solve Did NOT Converge![39m
+
+  Finished Solving                                                                       [[33m429.29 s[39m] [[33m  287 MB[39m]
+
+Fixed point convergence reason: DIVERGED_NONLINEAR
+
+Aborting as solve did not converge
+
+
+Solve failed, cutting timestep.
+
+
+Time Step 64, time = 1.16902e+06, dt = 40783.2
+
+[35mInitial fixed point residual norm: [39m8.100632e-02[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 64, time = 1.16902e+06, dt = 40783.2
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m8.100638e-02[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 47.53 s[39m] [[33m  287 MB[39m]
+
+
+ 0 Picard |R| = [32m8.100632e-02[39m
+ 1 Picard |R| = [31m8.100638e-02[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 64, time = 1.16902e+06, dt = 40783.2
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.397575e-03[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 21.96 s[39m] [[33m  287 MB[39m]
+
+
+ 0 Picard |R| = [32m8.100632e-02[39m
+ 1 Picard |R| = [31m8.100638e-02[39m
+ 2 Picard |R| = [32m1.397575e-03[39m
+
+[35mBeginning fixed point iteration 2[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 64, time = 1.16902e+06, dt = 40783.2
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.075717e-05[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 11.25 s[39m] [[33m  287 MB[39m]
+
+
+ 0 Picard |R| = [32m8.100632e-02[39m
+ 1 Picard |R| = [31m8.100638e-02[39m
+ 2 Picard |R| = [32m1.397575e-03[39m
+ 3 Picard |R| = [32m2.075717e-05[39m
+
+[35mBeginning fixed point iteration 3[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 64, time = 1.16902e+06, dt = 40783.2
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.994908e-07[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+
+ 0 Picard |R| = [32m8.100632e-02[39m
+ 1 Picard |R| = [31m8.100638e-02[39m
+ 2 Picard |R| = [32m1.397575e-03[39m
+ 3 Picard |R| = [32m2.075717e-05[39m
+ 4 Picard |R| = [32m2.994908e-07[39m
+
+Fixed point convergence reason: CONVERGED_ABS
+
+
+Time Step 65, time = 1.20981e+06, dt = 40783.2
+
+[35mInitial fixed point residual norm: [39m7.949802e-02[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 65, time = 1.20981e+06, dt = 40783.2
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m7.949808e-02[39m
+[35m
+Main app solve:[39m
+
+[32m Solve Converged![39m
+
+  Finished Solving                                                                       [[33m 49.05 s[39m] [[33m  287 MB[39m]
+
+
+ 0 Picard |R| = [32m7.949802e-02[39m
+ 1 Picard |R| = [31m7.949808e-02[39m
+
+[35mBeginning fixed point iteration 1[39m
+
+[36mpipe_mw0: [39m
+[36mpipe_mw0: [39mTime Step 65, time = 1.20981e+06, dt = 40783.2
+[36mpipe_mw0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.390097e-03[39m
+[35m
+Main app solve:[39m
+slurmstepd: error: *** JOB 23110521 ON uc2n041 CANCELLED AT 2024-02-04T11:55:03 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 23110521.0 ON uc2n041 CANCELLED AT 2024-02-04T11:55:03 DUE TO TIME LIMIT ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 304954 RUNNING AT uc2n041
+=   EXIT CODE: 15
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+YOUR APPLICATION TERMINATED WITH THE EXIT STRING: Terminated (signal 15)
+This typically refers to a problem with your application.
+Please see the FAQ page for debugging suggestions
+
+============================= JOB FEEDBACK =============================
+
+NodeName=uc2n[041-042,066-071]
+Job ID: 23110521
+Cluster: uc2
+User/Group: qz9211/agw
+State: TIMEOUT (exit code 0)
+Nodes: 8
+Cores per node: 80
+CPU Utilized: 25-23:41:11
+CPU Efficiency: 48.65% of 53-09:57:20 core-walltime
+Job Wall-clock time: 02:00:11
+Memory Utilized: 41.73 GB (estimated maximum)
+Memory Efficiency: 5.94% of 703.12 GB (1.10 GB/core)

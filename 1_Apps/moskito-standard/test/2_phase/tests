@@ -1,0 +1,27 @@
+[Tests]
+[./Hydraulics_Only_steady]
+  type = 'Exodiff'
+  input = 'hydraulic_only_steady.i'
+  exodiff = 'hydraulic_only_steady_out.e'
+[../]
+[./Hydraulics_Only_transient]
+  type = 'Exodiff'
+  input = 'hydraulic_only_transient.i'
+  exodiff = 'hydraulic_only_transient_out.e'
+[../]
+  [./Hasan_Kabir_Drift_Flux_Model]
+    type = 'Exodiff'
+    input = 'HK_DFM.i'
+    exodiff = 'HK_DFM_out.e'
+  [../]
+  [./Shi_Drift_Flux_Model]
+    type = 'Exodiff'
+    input = 'Shi_DFM.i'
+    exodiff = 'Shi_DFM_out.e'
+  [../]
+  [./Full_steady_bc_transient]
+    type = 'Exodiff'
+    input = 'full_bc_transient.i'
+    exodiff = 'full_bc_transient_out.e'
+  [../]
+[]

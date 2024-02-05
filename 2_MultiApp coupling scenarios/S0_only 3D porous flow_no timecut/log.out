@@ -1,0 +1,1038 @@
+mpirun --bind-to core --map-by core /home/kit/agw/qz9211/projects/moose/modules/porous_flow/porous_flow-opt -i /pfs/data5/home/kit/agw/qz9211/results/5_Heat_storage/2_coupling/3_result/1_fixedP/2_moose_mesh/1_300m_cubic/0_closedBC/2_1.5d_cut/1e-8/only_reservoir/reservoir.i
+                                                                               [[33m  7.82 s[39m] [[33m  108 MB[39m]
+Framework Information:
+MOOSE Version:           git commit 2d9ac4d977 on 2023-03-29
+LibMesh Version:         
+PETSc Version:           3.16.6
+SLEPc Version:           3.16.2
+Current Time:            Sat Feb  3 22:12:28 2024
+Executable Timestamp:    Tue Jan 30 13:49:57 2024
+
+Parallelism:
+  Num Processors:          160
+  Num Threads:             1
+
+Mesh: 
+  Parallel Type:           replicated
+  Mesh Dimension:          3
+  Spatial Dimension:       3
+  Nodes:                   
+    Total:                 25600
+    Local:                 267
+    Min/Max/Avg:           59/267/160
+  Elems:                   
+    Total:                 23064
+    Local:                 140
+    Min/Max/Avg:           140/148/144
+  Num Subdomains:          5
+  Num Partitions:          160
+  Partitioner:             metis
+
+Nonlinear System:
+  Num DOFs:                51200
+  Num Local DOFs:          534
+  Variables:               { "porepressure" "temperature" } 
+  Finite Element Types:    "LAGRANGE" 
+  Approximation Orders:    "FIRST" 
+
+Auxiliary System:
+  Num DOFs:                550760
+  Num Local DOFs:          4236
+  Variables:               { "velocity_x" "velocity_y" "velocity_z" } { "density" "viscosity" "enthalpy" 
+                             } { "pp_mw_well" "rho_mw_well" "mu_mw_well" "h_mw_well" "pp_sw_well" "rho_sw_well" 
+                             "mu_sw_well" "h_sw_well" } 
+  Finite Element Types:    "MONOMIAL" "MONOMIAL" "LAGRANGE" 
+  Approximation Orders:    "CONSTANT" "FIRST" "FIRST" 
+
+Execution Information:
+  Executioner:             Transient
+  TimeStepper:             IterationAdaptiveDT
+  TimeIntegrator:          ImplicitEuler
+  Solver Mode:             NEWTON
+  PETSc Preconditioner:    hypre boomeramg strong_threshold: 0.7 (auto)
+  MOOSE Preconditioner:    SMP
+
+
+Time Step 0, time = 0
+Warning, Exodus files cannot have titles longer than 80 characters.  Your title will be truncated.
+
+Time Step 1, time = 1, dt = 1
+ 0 Nonlinear |R| = [32m4.788167e+00[39m
+ 1 Nonlinear |R| = [32m1.025427e-02[39m
+ 2 Nonlinear |R| = [32m5.564288e-04[39m
+ 3 Nonlinear |R| = [32m4.003540e-05[39m
+ 4 Nonlinear |R| = [32m2.874349e-06[39m
+ 5 Nonlinear |R| = [32m2.145232e-07[39m
+ 6 Nonlinear |R| = [32m1.615760e-08[39m
+[32m Solve Converged![39m
+
+Time Step 2, time = 2.25, dt = 1.25
+ 0 Nonlinear |R| = [32m2.943949e+00[39m
+ 1 Nonlinear |R| = [32m2.150305e-03[39m
+ 2 Nonlinear |R| = [32m1.386171e-04[39m
+ 3 Nonlinear |R| = [32m1.095665e-05[39m
+ 4 Nonlinear |R| = [32m8.858634e-07[39m
+ 5 Nonlinear |R| = [32m7.391015e-08[39m
+ 6 Nonlinear |R| = [32m6.245307e-09[39m
+[32m Solve Converged![39m
+
+Time Step 3, time = 3.8125, dt = 1.5625
+ 0 Nonlinear |R| = [32m1.856114e+00[39m
+ 1 Nonlinear |R| = [32m1.908212e-03[39m
+ 2 Nonlinear |R| = [32m1.342533e-04[39m
+ 3 Nonlinear |R| = [32m1.214100e-05[39m
+ 4 Nonlinear |R| = [32m1.078187e-06[39m
+ 5 Nonlinear |R| = [32m9.962518e-08[39m
+ 6 Nonlinear |R| = [32m9.257240e-09[39m
+[32m Solve Converged![39m
+
+Time Step 4, time = 5.76562, dt = 1.95312
+ 0 Nonlinear |R| = [32m1.253457e+00[39m
+ 1 Nonlinear |R| = [32m2.964382e-03[39m
+ 2 Nonlinear |R| = [32m2.336925e-04[39m
+ 3 Nonlinear |R| = [32m2.291304e-05[39m
+ 4 Nonlinear |R| = [32m2.234471e-06[39m
+ 5 Nonlinear |R| = [32m2.256809e-07[39m
+ 6 Nonlinear |R| = [32m2.296597e-08[39m
+ 7 Nonlinear |R| = [32m2.365119e-09[39m
+[32m Solve Converged![39m
+
+Time Step 5, time = 8.20703, dt = 2.44141
+ 0 Nonlinear |R| = [32m9.157235e-01[39m
+ 1 Nonlinear |R| = [32m2.579245e-03[39m
+ 2 Nonlinear |R| = [32m2.219396e-04[39m
+ 3 Nonlinear |R| = [32m2.343420e-05[39m
+ 4 Nonlinear |R| = [32m2.476982e-06[39m
+ 5 Nonlinear |R| = [32m2.704429e-07[39m
+ 6 Nonlinear |R| = [32m2.977159e-08[39m
+ 7 Nonlinear |R| = [32m3.314427e-09[39m
+[32m Solve Converged![39m
+Currently Executing
+  Finished Solving                                                                       [[33m  5.07 s[39m] [[33m  139 MB[39m]
+
+Time Step 6, time = 11.2588, dt = 3.05176
+ 0 Nonlinear |R| = [32m7.086334e-01[39m
+ 1 Nonlinear |R| = [32m1.768268e-03[39m
+ 2 Nonlinear |R| = [32m1.630152e-04[39m
+ 3 Nonlinear |R| = [32m1.833219e-05[39m
+ 4 Nonlinear |R| = [32m2.076809e-06[39m
+ 5 Nonlinear |R| = [32m2.425142e-07[39m
+ 6 Nonlinear |R| = [32m2.857087e-08[39m
+ 7 Nonlinear |R| = [32m3.401620e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m  5.79 s[39m] [[33m  141 MB[39m]
+
+Time Step 7, time = 15.0735, dt = 3.8147
+ 0 Nonlinear |R| = [32m5.668908e-01[39m
+ 1 Nonlinear |R| = [32m1.083176e-03[39m
+ 2 Nonlinear |R| = [32m1.033337e-04[39m
+ 3 Nonlinear |R| = [32m1.218077e-05[39m
+ 4 Nonlinear |R| = [32m1.462408e-06[39m
+ 5 Nonlinear |R| = [32m1.807682e-07[39m
+ 6 Nonlinear |R| = [32m2.256287e-08[39m
+ 7 Nonlinear |R| = [32m2.845260e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m  5.49 s[39m] [[33m  144 MB[39m]
+
+Time Step 8, time = 19.8419, dt = 4.76837
+ 0 Nonlinear |R| = [32m4.614083e-01[39m
+ 1 Nonlinear |R| = [32m7.523316e-04[39m
+ 2 Nonlinear |R| = [32m6.429674e-05[39m
+ 3 Nonlinear |R| = [32m7.480025e-06[39m
+ 4 Nonlinear |R| = [32m9.336457e-07[39m
+ 5 Nonlinear |R| = [32m1.208094e-07[39m
+ 6 Nonlinear |R| = [32m1.582317e-08[39m
+ 7 Nonlinear |R| = [32m2.094005e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m  7.19 s[39m] [[33m  147 MB[39m]
+
+Time Step 9, time = 25.8023, dt = 5.96046
+ 0 Nonlinear |R| = [32m3.788458e-01[39m
+ 1 Nonlinear |R| = [32m8.345710e-04[39m
+ 2 Nonlinear |R| = [32m5.369715e-05[39m
+ 3 Nonlinear |R| = [32m4.923003e-06[39m
+ 4 Nonlinear |R| = [32m5.899643e-07[39m
+ 5 Nonlinear |R| = [32m7.813073e-08[39m
+ 6 Nonlinear |R| = [32m1.062540e-08[39m
+ 7 Nonlinear |R| = [32m1.463067e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m  7.60 s[39m] [[33m  149 MB[39m]
+
+Time Step 10, time = 33.2529, dt = 7.45058
+ 0 Nonlinear |R| = [32m3.124855e-01[39m
+ 1 Nonlinear |R| = [32m1.126735e-03[39m
+ 2 Nonlinear |R| = [32m6.550148e-05[39m
+ 3 Nonlinear |R| = [32m4.423601e-06[39m
+ 4 Nonlinear |R| = [32m4.198845e-07[39m
+ 5 Nonlinear |R| = [32m5.290339e-08[39m
+ 6 Nonlinear |R| = [32m7.323607e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m  7.21 s[39m] [[33m  150 MB[39m]
+
+Time Step 11, time = 42.5661, dt = 9.31323
+ 0 Nonlinear |R| = [32m2.583150e-01[39m
+ 1 Nonlinear |R| = [32m1.432111e-03[39m
+ 2 Nonlinear |R| = [32m8.355244e-05[39m
+ 3 Nonlinear |R| = [32m5.101156e-06[39m
+ 4 Nonlinear |R| = [32m3.746362e-07[39m
+ 5 Nonlinear |R| = [32m3.963196e-08[39m
+ 6 Nonlinear |R| = [32m5.338281e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m  7.69 s[39m] [[33m  151 MB[39m]
+
+Time Step 12, time = 54.2077, dt = 11.6415
+ 0 Nonlinear |R| = [32m2.134688e-01[39m
+ 1 Nonlinear |R| = [32m1.648283e-03[39m
+ 2 Nonlinear |R| = [32m9.815805e-05[39m
+ 3 Nonlinear |R| = [32m5.941735e-06[39m
+ 4 Nonlinear |R| = [32m3.890538e-07[39m
+ 5 Nonlinear |R| = [32m3.346392e-08[39m
+ 6 Nonlinear |R| = [32m4.107617e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m  7.42 s[39m] [[33m  153 MB[39m]
+
+Time Step 13, time = 68.7596, dt = 14.5519
+ 0 Nonlinear |R| = [32m1.758551e-01[39m
+ 1 Nonlinear |R| = [32m1.723819e-03[39m
+ 2 Nonlinear |R| = [32m1.048215e-04[39m
+ 3 Nonlinear |R| = [32m6.421848e-06[39m
+ 4 Nonlinear |R| = [32m4.075479e-07[39m
+ 5 Nonlinear |R| = [32m3.056582e-08[39m
+ 6 Nonlinear |R| = [32m3.281116e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m  9.02 s[39m] [[33m  155 MB[39m]
+
+Time Step 14, time = 86.9495, dt = 18.1899
+ 0 Nonlinear |R| = [32m1.441969e-01[39m
+ 1 Nonlinear |R| = [32m1.646494e-03[39m
+ 2 Nonlinear |R| = [32m1.019884e-04[39m
+ 3 Nonlinear |R| = [32m6.345696e-06[39m
+ 4 Nonlinear |R| = [32m4.022673e-07[39m
+ 5 Nonlinear |R| = [32m2.834786e-08[39m
+ 6 Nonlinear |R| = [32m2.710268e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m  9.81 s[39m] [[33m  156 MB[39m]
+
+Time Step 15, time = 109.687, dt = 22.7374
+ 0 Nonlinear |R| = [32m1.179733e-01[39m
+ 1 Nonlinear |R| = [32m1.439342e-03[39m
+ 2 Nonlinear |R| = [32m9.058620e-05[39m
+ 3 Nonlinear |R| = [32m5.720005e-06[39m
+ 4 Nonlinear |R| = [32m3.656624e-07[39m
+ 5 Nonlinear |R| = [32m2.526092e-08[39m
+ 6 Nonlinear |R| = [32m2.257826e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m  9.57 s[39m] [[33m  157 MB[39m]
+
+Time Step 16, time = 138.109, dt = 28.4217
+ 0 Nonlinear |R| = [32m9.709092e-02[39m
+ 1 Nonlinear |R| = [32m1.148519e-03[39m
+ 2 Nonlinear |R| = [32m7.326820e-05[39m
+ 3 Nonlinear |R| = [32m4.687964e-06[39m
+ 4 Nonlinear |R| = [32m3.031745e-07[39m
+ 5 Nonlinear |R| = [32m2.101085e-08[39m
+ 6 Nonlinear |R| = [32m1.849688e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m  9.88 s[39m] [[33m  159 MB[39m]
+
+Time Step 17, time = 173.636, dt = 35.5271
+ 0 Nonlinear |R| = [32m8.139072e-02[39m
+ 1 Nonlinear |R| = [32m8.285061e-04[39m
+ 2 Nonlinear |R| = [32m5.346671e-05[39m
+ 3 Nonlinear |R| = [32m3.461564e-06[39m
+ 4 Nonlinear |R| = [32m2.269288e-07[39m
+ 5 Nonlinear |R| = [32m1.606231e-08[39m
+ 6 Nonlinear |R| = [32m1.465736e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 11.49 s[39m] [[33m  160 MB[39m]
+
+Time Step 18, time = 218.045, dt = 44.4089
+ 0 Nonlinear |R| = [32m7.024098e-02[39m
+ 1 Nonlinear |R| = [32m5.280153e-04[39m
+ 2 Nonlinear |R| = [32m3.441484e-05[39m
+ 3 Nonlinear |R| = [32m2.253289e-06[39m
+ 4 Nonlinear |R| = [32m1.505097e-07[39m
+ 5 Nonlinear |R| = [32m1.119886e-08[39m
+ 6 Nonlinear |R| = [32m1.127592e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 12.38 s[39m] [[33m  162 MB[39m]
+
+Time Step 19, time = 273.556, dt = 55.5112
+ 0 Nonlinear |R| = [32m6.249577e-02[39m
+ 1 Nonlinear |R| = [32m2.801541e-04[39m
+ 2 Nonlinear |R| = [32m1.842722e-05[39m
+ 3 Nonlinear |R| = [32m1.224108e-06[39m
+ 4 Nonlinear |R| = [32m8.524952e-08[39m
+ 5 Nonlinear |R| = [32m7.228511e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 11.44 s[39m] [[33m  165 MB[39m]
+
+Time Step 20, time = 342.945, dt = 69.3889
+ 0 Nonlinear |R| = [32m5.687144e-02[39m
+ 1 Nonlinear |R| = [32m9.925686e-05[39m
+ 2 Nonlinear |R| = [32m6.626210e-06[39m
+ 3 Nonlinear |R| = [32m4.666493e-07[39m
+ 4 Nonlinear |R| = [32m4.000147e-08[39m
+ 5 Nonlinear |R| = [32m4.876528e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 12.27 s[39m] [[33m  166 MB[39m]
+
+Time Step 21, time = 429.681, dt = 86.7362
+ 0 Nonlinear |R| = [32m5.239658e-02[39m
+ 1 Nonlinear |R| = [32m2.196784e-05[39m
+ 2 Nonlinear |R| = [32m1.677245e-06[39m
+ 3 Nonlinear |R| = [32m1.902999e-07[39m
+ 4 Nonlinear |R| = [32m2.773108e-08[39m
+ 5 Nonlinear |R| = [32m4.397966e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 11.09 s[39m] [[33m  167 MB[39m]
+
+Time Step 22, time = 538.101, dt = 108.42
+ 0 Nonlinear |R| = [32m4.858155e-02[39m
+ 1 Nonlinear |R| = [32m8.315840e-05[39m
+ 2 Nonlinear |R| = [32m5.612553e-06[39m
+ 3 Nonlinear |R| = [32m4.087155e-07[39m
+ 4 Nonlinear |R| = [32m3.772925e-08[39m
+ 5 Nonlinear |R| = [32m4.935401e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 11.64 s[39m] [[33m  168 MB[39m]
+
+Time Step 23, time = 673.626, dt = 135.525
+ 0 Nonlinear |R| = [32m4.530879e-02[39m
+ 1 Nonlinear |R| = [32m1.087997e-04[39m
+ 2 Nonlinear |R| = [32m7.351183e-06[39m
+ 3 Nonlinear |R| = [32m5.260589e-07[39m
+ 4 Nonlinear |R| = [32m4.589522e-08[39m
+ 5 Nonlinear |R| = [32m5.710512e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 11.26 s[39m] [[33m  170 MB[39m]
+
+Time Step 24, time = 843.033, dt = 169.407
+ 0 Nonlinear |R| = [32m4.262989e-02[39m
+ 1 Nonlinear |R| = [32m1.101266e-04[39m
+ 2 Nonlinear |R| = [32m7.485822e-06[39m
+ 3 Nonlinear |R| = [32m5.476773e-07[39m
+ 4 Nonlinear |R| = [32m5.044073e-08[39m
+ 5 Nonlinear |R| = [32m6.603515e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 11.42 s[39m] [[33m  171 MB[39m]
+
+Time Step 25, time = 1054.79, dt = 211.758
+ 0 Nonlinear |R| = [32m4.059741e-02[39m
+ 1 Nonlinear |R| = [32m9.742591e-05[39m
+ 2 Nonlinear |R| = [32m6.698841e-06[39m
+ 3 Nonlinear |R| = [32m5.202214e-07[39m
+ 4 Nonlinear |R| = [32m5.420693e-08[39m
+ 5 Nonlinear |R| = [32m7.730013e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 11.99 s[39m] [[33m  172 MB[39m]
+
+Time Step 26, time = 1319.49, dt = 264.698
+ 0 Nonlinear |R| = [32m3.917523e-02[39m
+ 1 Nonlinear |R| = [32m7.768184e-05[39m
+ 2 Nonlinear |R| = [32m5.521270e-06[39m
+ 3 Nonlinear |R| = [32m4.868669e-07[39m
+ 4 Nonlinear |R| = [32m6.000354e-08[39m
+ 5 Nonlinear |R| = [32m9.219994e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 11.53 s[39m] [[33m  173 MB[39m]
+
+Time Step 27, time = 1650.36, dt = 330.872
+ 0 Nonlinear |R| = [32m3.823281e-02[39m
+ 1 Nonlinear |R| = [32m5.731303e-05[39m
+ 2 Nonlinear |R| = [32m4.450336e-06[39m
+ 3 Nonlinear |R| = [32m4.881969e-07[39m
+ 4 Nonlinear |R| = [32m7.000650e-08[39m
+ 5 Nonlinear |R| = [32m1.124196e-08[39m
+ 6 Nonlinear |R| = [32m1.850201e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 15.06 s[39m] [[33m  174 MB[39m]
+
+Time Step 28, time = 2063.95, dt = 413.59
+ 0 Nonlinear |R| = [32m3.759717e-02[39m
+ 1 Nonlinear |R| = [32m4.134573e-05[39m
+ 2 Nonlinear |R| = [32m3.908041e-06[39m
+ 3 Nonlinear |R| = [32m5.386813e-07[39m
+ 4 Nonlinear |R| = [32m8.371013e-08[39m
+ 5 Nonlinear |R| = [32m1.366948e-08[39m
+ 6 Nonlinear |R| = [32m2.255118e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 13.65 s[39m] [[33m  175 MB[39m]
+
+Time Step 29, time = 2580.94, dt = 516.988
+ 0 Nonlinear |R| = [32m3.711197e-02[39m
+ 1 Nonlinear |R| = [32m3.438373e-05[39m
+ 2 Nonlinear |R| = [32m4.100694e-06[39m
+ 3 Nonlinear |R| = [32m6.370887e-07[39m
+ 4 Nonlinear |R| = [32m1.015991e-07[39m
+ 5 Nonlinear |R| = [32m1.665559e-08[39m
+ 6 Nonlinear |R| = [32m2.746747e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 13.63 s[39m] [[33m  177 MB[39m]
+
+Time Step 30, time = 3227.17, dt = 646.235
+ 0 Nonlinear |R| = [32m3.666593e-02[39m
+ 1 Nonlinear |R| = [32m3.671428e-05[39m
+ 2 Nonlinear |R| = [32m4.816211e-06[39m
+ 3 Nonlinear |R| = [32m7.692951e-07[39m
+ 4 Nonlinear |R| = [32m1.231417e-07[39m
+ 5 Nonlinear |R| = [32m2.017064e-08[39m
+ 6 Nonlinear |R| = [32m3.320721e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 12.74 s[39m] [[33m  180 MB[39m]
+
+Time Step 31, time = 4034.97, dt = 807.794
+ 0 Nonlinear |R| = [32m3.618920e-02[39m
+ 1 Nonlinear |R| = [32m4.404966e-05[39m
+ 2 Nonlinear |R| = [32m5.806161e-06[39m
+ 3 Nonlinear |R| = [32m9.271660e-07[39m
+ 4 Nonlinear |R| = [32m1.481047e-07[39m
+ 5 Nonlinear |R| = [32m2.420136e-08[39m
+ 6 Nonlinear |R| = [32m3.974171e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 13.21 s[39m] [[33m  205 MB[39m]
+
+Time Step 32, time = 5044.71, dt = 1009.74
+ 0 Nonlinear |R| = [32m3.563741e-02[39m
+ 1 Nonlinear |R| = [32m5.367123e-05[39m
+ 2 Nonlinear |R| = [32m6.961970e-06[39m
+ 3 Nonlinear |R| = [32m1.106955e-06[39m
+ 4 Nonlinear |R| = [32m1.762214e-07[39m
+ 5 Nonlinear |R| = [32m2.870349e-08[39m
+ 6 Nonlinear |R| = [32m4.697977e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 13.87 s[39m] [[33m  212 MB[39m]
+
+Time Step 33, time = 6306.89, dt = 1262.18
+ 0 Nonlinear |R| = [32m3.497849e-02[39m
+ 1 Nonlinear |R| = [32m6.514143e-05[39m
+ 2 Nonlinear |R| = [32m8.272932e-06[39m
+ 3 Nonlinear |R| = [32m1.308951e-06[39m
+ 4 Nonlinear |R| = [32m2.075946e-07[39m
+ 5 Nonlinear |R| = [32m3.367938e-08[39m
+ 6 Nonlinear |R| = [32m5.490398e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 13.53 s[39m] [[33m  212 MB[39m]
+
+Time Step 34, time = 7884.61, dt = 1577.72
+ 0 Nonlinear |R| = [32m3.418581e-02[39m
+ 1 Nonlinear |R| = [32m7.867414e-05[39m
+ 2 Nonlinear |R| = [32m9.631488e-06[39m
+ 3 Nonlinear |R| = [32m1.516749e-06[39m
+ 4 Nonlinear |R| = [32m2.392480e-07[39m
+ 5 Nonlinear |R| = [32m3.862302e-08[39m
+ 6 Nonlinear |R| = [32m6.263412e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 13.62 s[39m] [[33m  213 MB[39m]
+
+Time Step 35, time = 9856.76, dt = 1972.15
+ 0 Nonlinear |R| = [32m3.323556e-02[39m
+ 1 Nonlinear |R| = [32m9.476324e-05[39m
+ 2 Nonlinear |R| = [32m1.103784e-05[39m
+ 3 Nonlinear |R| = [32m1.727546e-06[39m
+ 4 Nonlinear |R| = [32m2.708049e-07[39m
+ 5 Nonlinear |R| = [32m4.345250e-08[39m
+ 6 Nonlinear |R| = [32m7.002529e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 14.82 s[39m] [[33m  214 MB[39m]
+
+Time Step 36, time = 12322, dt = 2465.19
+ 0 Nonlinear |R| = [32m3.210672e-02[39m
+ 1 Nonlinear |R| = [32m1.138780e-04[39m
+ 2 Nonlinear |R| = [32m1.237183e-05[39m
+ 3 Nonlinear |R| = [32m1.921934e-06[39m
+ 4 Nonlinear |R| = [32m2.990325e-07[39m
+ 5 Nonlinear |R| = [32m4.763483e-08[39m
+ 6 Nonlinear |R| = [32m7.619322e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 14.64 s[39m] [[33m  214 MB[39m]
+
+Time Step 37, time = 15403.4, dt = 3081.49
+ 0 Nonlinear |R| = [32m3.078306e-02[39m
+ 1 Nonlinear |R| = [32m1.363694e-04[39m
+ 2 Nonlinear |R| = [32m1.348298e-05[39m
+ 3 Nonlinear |R| = [32m2.075671e-06[39m
+ 4 Nonlinear |R| = [32m3.201050e-07[39m
+ 5 Nonlinear |R| = [32m5.055810e-08[39m
+ 6 Nonlinear |R| = [32m8.016243e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 16.17 s[39m] [[33m  215 MB[39m]
+
+Time Step 38, time = 19255.3, dt = 3851.86
+ 0 Nonlinear |R| = [32m2.925711e-02[39m
+ 1 Nonlinear |R| = [32m1.621072e-04[39m
+ 2 Nonlinear |R| = [32m1.417264e-05[39m
+ 3 Nonlinear |R| = [32m2.157988e-06[39m
+ 4 Nonlinear |R| = [32m3.293714e-07[39m
+ 5 Nonlinear |R| = [32m5.151026e-08[39m
+ 6 Nonlinear |R| = [32m8.084987e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 13.93 s[39m] [[33m  216 MB[39m]
+
+Time Step 39, time = 24070.1, dt = 4814.82
+ 0 Nonlinear |R| = [32m2.753604e-02[39m
+ 1 Nonlinear |R| = [32m1.898596e-04[39m
+ 2 Nonlinear |R| = [32m1.421333e-05[39m
+ 3 Nonlinear |R| = [32m2.135561e-06[39m
+ 4 Nonlinear |R| = [32m3.221153e-07[39m
+ 5 Nonlinear |R| = [32m4.981957e-08[39m
+ 6 Nonlinear |R| = [32m7.731704e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 15.14 s[39m] [[33m  217 MB[39m]
+
+Time Step 40, time = 30088.7, dt = 6018.53
+ 0 Nonlinear |R| = [32m2.564878e-02[39m
+ 1 Nonlinear |R| = [32m2.164079e-04[39m
+ 2 Nonlinear |R| = [32m1.335216e-05[39m
+ 3 Nonlinear |R| = [32m1.971588e-06[39m
+ 4 Nonlinear |R| = [32m2.933115e-07[39m
+ 5 Nonlinear |R| = [32m4.479943e-08[39m
+ 6 Nonlinear |R| = [32m6.865431e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 14.98 s[39m] [[33m  218 MB[39m]
+
+Time Step 41, time = 37611.8, dt = 7523.16
+ 0 Nonlinear |R| = [32m2.365262e-02[39m
+ 1 Nonlinear |R| = [32m2.362670e-04[39m
+ 2 Nonlinear |R| = [32m1.140451e-05[39m
+ 3 Nonlinear |R| = [32m1.641978e-06[39m
+ 4 Nonlinear |R| = [32m2.402880e-07[39m
+ 5 Nonlinear |R| = [32m3.619636e-08[39m
+ 6 Nonlinear |R| = [32m5.472282e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 16.57 s[39m] [[33m  218 MB[39m]
+
+Time Step 42, time = 47015.8, dt = 9403.95
+ 0 Nonlinear |R| = [32m2.163544e-02[39m
+ 1 Nonlinear |R| = [32m2.422851e-04[39m
+ 2 Nonlinear |R| = [32m8.353248e-06[39m
+ 3 Nonlinear |R| = [32m1.142131e-06[39m
+ 4 Nonlinear |R| = [32m1.631882e-07[39m
+ 5 Nonlinear |R| = [32m2.419077e-08[39m
+ 6 Nonlinear |R| = [32m3.605386e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 16.22 s[39m] [[33m  219 MB[39m]
+
+Time Step 43, time = 58770.7, dt = 11754.9
+ 0 Nonlinear |R| = [32m1.970707e-02[39m
+ 1 Nonlinear |R| = [32m2.291563e-04[39m
+ 2 Nonlinear |R| = [32m4.771479e-06[39m
+ 3 Nonlinear |R| = [32m5.179875e-07[39m
+ 4 Nonlinear |R| = [32m6.721074e-08[39m
+ 5 Nonlinear |R| = [32m9.617190e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 14.26 s[39m] [[33m  221 MB[39m]
+
+Time Step 44, time = 73464.4, dt = 14693.7
+ 0 Nonlinear |R| = [32m1.797349e-02[39m
+ 1 Nonlinear |R| = [32m2.015101e-04[39m
+ 2 Nonlinear |R| = [32m4.534192e-06[39m
+ 3 Nonlinear |R| = [32m4.531457e-07[39m
+ 4 Nonlinear |R| = [32m5.514786e-08[39m
+ 5 Nonlinear |R| = [32m7.689539e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 15.10 s[39m] [[33m  222 MB[39m]
+
+Time Step 45, time = 91831.5, dt = 18367.1
+ 0 Nonlinear |R| = [32m1.649625e-02[39m
+ 1 Nonlinear |R| = [32m1.866054e-04[39m
+ 2 Nonlinear |R| = [32m9.238738e-06[39m
+ 3 Nonlinear |R| = [32m1.217303e-06[39m
+ 4 Nonlinear |R| = [32m1.664805e-07[39m
+ 5 Nonlinear |R| = [32m2.373441e-08[39m
+ 6 Nonlinear |R| = [32m3.403891e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 18.70 s[39m] [[33m  222 MB[39m]
+
+Time Step 46, time = 114790, dt = 22958.9
+ 0 Nonlinear |R| = [32m1.525983e-02[39m
+ 1 Nonlinear |R| = [32m2.185111e-04[39m
+ 2 Nonlinear |R| = [32m1.455294e-05[39m
+ 3 Nonlinear |R| = [32m1.975667e-06[39m
+ 4 Nonlinear |R| = [32m2.703940e-07[39m
+ 5 Nonlinear |R| = [32m3.822867e-08[39m
+ 6 Nonlinear |R| = [32m5.424799e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 18.62 s[39m] [[33m  223 MB[39m]
+
+Time Step 47, time = 143489, dt = 28698.6
+ 0 Nonlinear |R| = [32m1.418040e-02[39m
+ 1 Nonlinear |R| = [32m2.778912e-04[39m
+ 2 Nonlinear |R| = [32m1.892849e-05[39m
+ 3 Nonlinear |R| = [32m2.573261e-06[39m
+ 4 Nonlinear |R| = [32m3.499943e-07[39m
+ 5 Nonlinear |R| = [32m4.905639e-08[39m
+ 6 Nonlinear |R| = [32m6.899335e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 19.04 s[39m] [[33m  223 MB[39m]
+
+Time Step 48, time = 179362, dt = 35873.2
+ 0 Nonlinear |R| = [32m1.316125e-02[39m
+ 1 Nonlinear |R| = [32m3.187383e-04[39m
+ 2 Nonlinear |R| = [32m2.145039e-05[39m
+ 3 Nonlinear |R| = [32m2.903885e-06[39m
+ 4 Nonlinear |R| = [32m3.924599e-07[39m
+ 5 Nonlinear |R| = [32m5.460291e-08[39m
+ 6 Nonlinear |R| = [32m7.621166e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 20.09 s[39m] [[33m  224 MB[39m]
+
+Time Step 49, time = 224204, dt = 44841.6
+ 0 Nonlinear |R| = [32m1.215237e-02[39m
+ 1 Nonlinear |R| = [32m3.188239e-04[39m
+ 2 Nonlinear |R| = [32m2.167645e-05[39m
+ 3 Nonlinear |R| = [32m2.923363e-06[39m
+ 4 Nonlinear |R| = [32m3.939630e-07[39m
+ 5 Nonlinear |R| = [32m5.465996e-08[39m
+ 6 Nonlinear |R| = [32m7.599366e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 20.63 s[39m] [[33m  224 MB[39m]
+
+Time Step 50, time = 280256, dt = 56051.9
+ 0 Nonlinear |R| = [32m1.116508e-02[39m
+ 1 Nonlinear |R| = [32m2.929901e-04[39m
+ 2 Nonlinear |R| = [32m1.973767e-05[39m
+ 3 Nonlinear |R| = [32m2.678384e-06[39m
+ 4 Nonlinear |R| = [32m3.677877e-07[39m
+ 5 Nonlinear |R| = [32m5.283603e-08[39m
+ 6 Nonlinear |R| = [32m7.725755e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 21.20 s[39m] [[33m  224 MB[39m]
+
+Time Step 51, time = 350321, dt = 70064.9
+ 0 Nonlinear |R| = [32m1.023703e-02[39m
+ 1 Nonlinear |R| = [32m2.773550e-04[39m
+ 2 Nonlinear |R| = [32m1.678238e-05[39m
+ 3 Nonlinear |R| = [32m2.432080e-06[39m
+ 4 Nonlinear |R| = [32m3.864058e-07[39m
+ 5 Nonlinear |R| = [32m6.990125e-08[39m
+ 6 Nonlinear |R| = [32m1.369274e-08[39m
+ 7 Nonlinear |R| = [32m2.874701e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 24.45 s[39m] [[33m  226 MB[39m]
+
+Time Step 52, time = 437902, dt = 87581.2
+ 0 Nonlinear |R| = [32m9.389500e-03[39m
+ 1 Nonlinear |R| = [32m2.786910e-04[39m
+ 2 Nonlinear |R| = [32m1.599278e-05[39m
+ 3 Nonlinear |R| = [32m3.044750e-06[39m
+ 4 Nonlinear |R| = [32m6.964080e-07[39m
+ 5 Nonlinear |R| = [32m1.751685e-07[39m
+ 6 Nonlinear |R| = [32m4.539921e-08[39m
+ 7 Nonlinear |R| = [32m1.200756e-08[39m
+ 8 Nonlinear |R| = [32m3.228819e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 30.01 s[39m] [[33m  226 MB[39m]
+
+Time Step 53, time = 547378, dt = 109476
+ 0 Nonlinear |R| = [32m8.617552e-03[39m
+ 1 Nonlinear |R| = [32m2.853167e-04[39m
+ 2 Nonlinear |R| = [32m2.551100e-05[39m
+ 3 Nonlinear |R| = [32m7.073127e-06[39m
+ 4 Nonlinear |R| = [32m2.147382e-06[39m
+ 5 Nonlinear |R| = [32m6.695158e-07[39m
+ 6 Nonlinear |R| = [32m2.108296e-07[39m
+ 7 Nonlinear |R| = [32m6.707831e-08[39m
+ 8 Nonlinear |R| = [32m2.166224e-08[39m
+ 9 Nonlinear |R| = [32m7.170375e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 34.50 s[39m] [[33m  227 MB[39m]
+
+Time Step 54, time = 676978, dt = 129600
+ 0 Nonlinear |R| = [32m7.907954e-03[39m
+ 1 Nonlinear |R| = [32m3.070062e-04[39m
+ 2 Nonlinear |R| = [32m5.937835e-05[39m
+ 3 Nonlinear |R| = [32m2.038088e-05[39m
+ 4 Nonlinear |R| = [32m7.230920e-06[39m
+ 5 Nonlinear |R| = [32m2.590487e-06[39m
+ 6 Nonlinear |R| = [32m9.338702e-07[39m
+ 7 Nonlinear |R| = [32m3.396290e-07[39m
+ 8 Nonlinear |R| = [32m1.253788e-07[39m
+ 9 Nonlinear |R| = [32m4.752640e-08[39m
+10 Nonlinear |R| = [32m1.883482e-08[39m
+11 Nonlinear |R| = [32m7.974996e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 40.72 s[39m] [[33m  227 MB[39m]
+
+Time Step 55, time = 806578, dt = 129600
+ 0 Nonlinear |R| = [32m7.285349e-03[39m
+ 1 Nonlinear |R| = [32m3.499068e-04[39m
+ 2 Nonlinear |R| = [32m1.047679e-04[39m
+ 3 Nonlinear |R| = [32m3.701593e-05[39m
+ 4 Nonlinear |R| = [32m1.322633e-05[39m
+ 5 Nonlinear |R| = [32m4.749966e-06[39m
+ 6 Nonlinear |R| = [32m1.714685e-06[39m
+ 7 Nonlinear |R| = [32m6.241092e-07[39m
+ 8 Nonlinear |R| = [32m2.305085e-07[39m
+ 9 Nonlinear |R| = [32m8.741479e-08[39m
+10 Nonlinear |R| = [32m3.468579e-08[39m
+11 Nonlinear |R| = [32m1.473645e-08[39m
+12 Nonlinear |R| = [32m6.808835e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 46.23 s[39m] [[33m  228 MB[39m]
+
+Time Step 56, time = 936178, dt = 129600
+ 0 Nonlinear |R| = [32m6.815656e-03[39m
+ 1 Nonlinear |R| = [32m4.912416e-04[39m
+ 2 Nonlinear |R| = [32m1.717223e-04[39m
+ 3 Nonlinear |R| = [32m6.151292e-05[39m
+ 4 Nonlinear |R| = [32m2.206632e-05[39m
+ 5 Nonlinear |R| = [32m7.941179e-06[39m
+ 6 Nonlinear |R| = [32m2.871888e-06[39m
+ 7 Nonlinear |R| = [32m1.047381e-06[39m
+ 8 Nonlinear |R| = [32m3.878084e-07[39m
+ 9 Nonlinear |R| = [32m1.475842e-07[39m
+10 Nonlinear |R| = [32m5.885727e-08[39m
+11 Nonlinear |R| = [32m2.517025e-08[39m
+12 Nonlinear |R| = [32m1.171005e-08[39m
+13 Nonlinear |R| = [32m5.898063e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 49.47 s[39m] [[33m  228 MB[39m]
+
+Time Step 57, time = 1.06578e+06, dt = 129600
+ 0 Nonlinear |R| = [32m6.445296e-03[39m
+ 1 Nonlinear |R| = [32m7.024816e-04[39m
+ 2 Nonlinear |R| = [32m2.597996e-04[39m
+ 3 Nonlinear |R| = [32m9.377596e-05[39m
+ 4 Nonlinear |R| = [32m3.372658e-05[39m
+ 5 Nonlinear |R| = [32m1.215827e-05[39m
+ 6 Nonlinear |R| = [32m4.404384e-06[39m
+ 7 Nonlinear |R| = [32m1.609407e-06[39m
+ 8 Nonlinear |R| = [32m5.973837e-07[39m
+ 9 Nonlinear |R| = [32m2.281027e-07[39m
+10 Nonlinear |R| = [32m9.137264e-08[39m
+11 Nonlinear |R| = [32m3.927523e-08[39m
+12 Nonlinear |R| = [32m1.835596e-08[39m
+13 Nonlinear |R| = [32m9.273494e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 48.31 s[39m] [[33m  228 MB[39m]
+
+Time Step 58, time = 1.19538e+06, dt = 129600
+ 0 Nonlinear |R| = [32m6.143017e-03[39m
+ 1 Nonlinear |R| = [32m9.643244e-04[39m
+ 2 Nonlinear |R| = [32m3.661322e-04[39m
+ 3 Nonlinear |R| = [32m1.327920e-04[39m
+ 4 Nonlinear |R| = [32m4.784754e-05[39m
+ 5 Nonlinear |R| = [32m1.727349e-05[39m
+ 6 Nonlinear |R| = [32m6.266675e-06[39m
+ 7 Nonlinear |R| = [32m2.293921e-06[39m
+ 8 Nonlinear |R| = [32m8.533669e-07[39m
+ 9 Nonlinear |R| = [32m3.268126e-07[39m
+10 Nonlinear |R| = [32m1.314057e-07[39m
+11 Nonlinear |R| = [32m5.671152e-08[39m
+12 Nonlinear |R| = [32m2.659249e-08[39m
+13 Nonlinear |R| = [32m1.345941e-08[39m
+14 Nonlinear |R| = [32m7.217550e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 51.12 s[39m] [[33m  228 MB[39m]
+
+Time Step 59, time = 1.32498e+06, dt = 129600
+ 0 Nonlinear |R| = [32m5.889070e-03[39m
+ 1 Nonlinear |R| = [32m1.260166e-03[39m
+ 2 Nonlinear |R| = [32m4.857878e-04[39m
+ 3 Nonlinear |R| = [32m1.767741e-04[39m
+ 4 Nonlinear |R| = [32m6.378620e-05[39m
+ 5 Nonlinear |R| = [32m2.305544e-05[39m
+ 6 Nonlinear |R| = [32m8.375259e-06[39m
+ 7 Nonlinear |R| = [32m3.070618e-06[39m
+ 8 Nonlinear |R| = [32m1.144642e-06[39m
+ 9 Nonlinear |R| = [32m4.395481e-07[39m
+10 Nonlinear |R| = [32m1.773307e-07[39m
+11 Nonlinear |R| = [32m7.680037e-08[39m
+12 Nonlinear |R| = [32m3.610987e-08[39m
+13 Nonlinear |R| = [32m1.830130e-08[39m
+14 Nonlinear |R| = [32m9.816232e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 53.24 s[39m] [[33m  229 MB[39m]
+
+Time Step 60, time = 1.45458e+06, dt = 129600
+ 0 Nonlinear |R| = [32m5.669966e-03[39m
+ 1 Nonlinear |R| = [32m1.572659e-03[39m
+ 2 Nonlinear |R| = [32m6.124291e-04[39m
+ 3 Nonlinear |R| = [32m2.234048e-04[39m
+ 4 Nonlinear |R| = [32m8.070429e-05[39m
+ 5 Nonlinear |R| = [32m2.920089e-05[39m
+ 6 Nonlinear |R| = [32m1.062006e-05[39m
+ 7 Nonlinear |R| = [32m3.899273e-06[39m
+ 8 Nonlinear |R| = [32m1.456316e-06[39m
+ 9 Nonlinear |R| = [32m5.606559e-07[39m
+10 Nonlinear |R| = [32m2.269011e-07[39m
+11 Nonlinear |R| = [32m9.858222e-08[39m
+12 Nonlinear |R| = [32m4.645939e-08[39m
+13 Nonlinear |R| = [32m2.357048e-08[39m
+14 Nonlinear |R| = [32m1.264178e-08[39m
+15 Nonlinear |R| = [32m7.046120e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 56.57 s[39m] [[33m  229 MB[39m]
+
+Time Step 61, time = 1.58418e+06, dt = 129600
+ 0 Nonlinear |R| = [32m5.475806e-03[39m
+ 1 Nonlinear |R| = [32m1.883879e-03[39m
+ 2 Nonlinear |R| = [32m7.390809e-04[39m
+ 3 Nonlinear |R| = [32m2.701195e-04[39m
+ 4 Nonlinear |R| = [32m9.767150e-05[39m
+ 5 Nonlinear |R| = [32m3.537228e-05[39m
+ 6 Nonlinear |R| = [32m1.287817e-05[39m
+ 7 Nonlinear |R| = [32m4.734804e-06[39m
+ 8 Nonlinear |R| = [32m1.771629e-06[39m
+ 9 Nonlinear |R| = [32m6.837426e-07[39m
+10 Nonlinear |R| = [32m2.775644e-07[39m
+11 Nonlinear |R| = [32m1.209632e-07[39m
+12 Nonlinear |R| = [32m5.712977e-08[39m
+13 Nonlinear |R| = [32m2.900742e-08[39m
+14 Nonlinear |R| = [32m1.555391e-08[39m
+15 Nonlinear |R| = [32m8.662408e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 53.90 s[39m] [[33m  229 MB[39m]
+
+Time Step 62, time = 1.71378e+06, dt = 129600
+ 0 Nonlinear |R| = [32m5.298917e-03[39m
+ 1 Nonlinear |R| = [32m2.176610e-03[39m
+ 2 Nonlinear |R| = [32m8.588726e-04[39m
+ 3 Nonlinear |R| = [32m3.143819e-04[39m
+ 4 Nonlinear |R| = [32m1.137661e-04[39m
+ 5 Nonlinear |R| = [32m4.123457e-05[39m
+ 6 Nonlinear |R| = [32m1.502735e-05[39m
+ 7 Nonlinear |R| = [32m5.532298e-06[39m
+ 8 Nonlinear |R| = [32m2.073857e-06[39m
+ 9 Nonlinear |R| = [32m8.024280e-07[39m
+10 Nonlinear |R| = [32m3.267806e-07[39m
+11 Nonlinear |R| = [32m1.428649e-07[39m
+12 Nonlinear |R| = [32m6.762513e-08[39m
+13 Nonlinear |R| = [32m3.436598e-08[39m
+14 Nonlinear |R| = [32m1.842288e-08[39m
+15 Nonlinear |R| = [32m1.025204e-08[39m
+16 Nonlinear |R| = [32m5.858764e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 57.72 s[39m] [[33m  230 MB[39m]
+
+Time Step 63, time = 1.84338e+06, dt = 129600
+ 0 Nonlinear |R| = [32m5.133215e-03[39m
+ 1 Nonlinear |R| = [32m2.435700e-03[39m
+ 2 Nonlinear |R| = [32m9.656647e-04[39m
+ 3 Nonlinear |R| = [32m3.539177e-04[39m
+ 4 Nonlinear |R| = [32m1.281602e-04[39m
+ 5 Nonlinear |R| = [32m4.648635e-05[39m
+ 6 Nonlinear |R| = [32m1.695748e-05[39m
+ 7 Nonlinear |R| = [32m6.251204e-06[39m
+ 8 Nonlinear |R| = [32m2.347862e-06[39m
+ 9 Nonlinear |R| = [32m9.109158e-07[39m
+10 Nonlinear |R| = [32m3.722318e-07[39m
+11 Nonlinear |R| = [32m1.632978e-07[39m
+12 Nonlinear |R| = [32m7.748880e-08[39m
+13 Nonlinear |R| = [32m3.941925e-08[39m
+14 Nonlinear |R| = [32m2.112927e-08[39m
+15 Nonlinear |R| = [32m1.174956e-08[39m
+16 Nonlinear |R| = [32m6.708486e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 57.06 s[39m] [[33m  230 MB[39m]
+
+Time Step 64, time = 1.97298e+06, dt = 129600
+ 0 Nonlinear |R| = [32m4.973921e-03[39m
+ 1 Nonlinear |R| = [32m2.649114e-03[39m
+ 2 Nonlinear |R| = [32m1.054510e-03[39m
+ 3 Nonlinear |R| = [32m3.868870e-04[39m
+ 4 Nonlinear |R| = [32m1.401833e-04[39m
+ 5 Nonlinear |R| = [32m5.088311e-05[39m
+ 6 Nonlinear |R| = [32m1.857904e-05[39m
+ 7 Nonlinear |R| = [32m6.858473e-06[39m
+ 8 Nonlinear |R| = [32m2.581253e-06[39m
+ 9 Nonlinear |R| = [32m1.004427e-06[39m
+10 Nonlinear |R| = [32m4.119831e-07[39m
+11 Nonlinear |R| = [32m1.814213e-07[39m
+12 Nonlinear |R| = [32m8.632460e-08[39m
+13 Nonlinear |R| = [32m4.396627e-08[39m
+14 Nonlinear |R| = [32m2.356531e-08[39m
+15 Nonlinear |R| = [32m1.309486e-08[39m
+16 Nonlinear |R| = [32m7.469721e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 58.79 s[39m] [[33m  231 MB[39m]
+
+Time Step 65, time = 2.10258e+06, dt = 129600
+ 0 Nonlinear |R| = [32m4.817455e-03[39m
+ 1 Nonlinear |R| = [32m2.808554e-03[39m
+ 2 Nonlinear |R| = [32m1.121927e-03[39m
+ 3 Nonlinear |R| = [32m4.119888e-04[39m
+ 4 Nonlinear |R| = [32m1.493604e-04[39m
+ 5 Nonlinear |R| = [32m5.425131e-05[39m
+ 6 Nonlinear |R| = [32m1.982838e-05[39m
+ 7 Nonlinear |R| = [32m7.330559e-06[39m
+ 8 Nonlinear |R| = [32m2.765182e-06[39m
+ 9 Nonlinear |R| = [32m1.079541e-06[39m
+10 Nonlinear |R| = [32m4.446474e-07[39m
+11 Nonlinear |R| = [32m1.966344e-07[39m
+12 Nonlinear |R| = [32m9.385250e-08[39m
+13 Nonlinear |R| = [32m4.786801e-08[39m
+14 Nonlinear |R| = [32m2.565856e-08[39m
+15 Nonlinear |R| = [32m1.424884e-08[39m
+16 Nonlinear |R| = [32m8.120795e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 59.02 s[39m] [[33m  232 MB[39m]
+
+Time Step 66, time = 2.23218e+06, dt = 129600
+ 0 Nonlinear |R| = [32m4.661373e-03[39m
+ 1 Nonlinear |R| = [32m2.909637e-03[39m
+ 2 Nonlinear |R| = [32m1.165993e-03[39m
+ 3 Nonlinear |R| = [32m4.284967e-04[39m
+ 4 Nonlinear |R| = [32m1.554252e-04[39m
+ 5 Nonlinear |R| = [32m5.649332e-05[39m
+ 6 Nonlinear |R| = [32m2.066952e-05[39m
+ 7 Nonlinear |R| = [32m7.654045e-06[39m
+ 8 Nonlinear |R| = [32m2.894542e-06[39m
+ 9 Nonlinear |R| = [32m1.134238e-06[39m
+10 Nonlinear |R| = [32m4.693766e-07[39m
+11 Nonlinear |R| = [32m2.085517e-07[39m
+12 Nonlinear |R| = [32m9.988381e-08[39m
+13 Nonlinear |R| = [32m5.102665e-08[39m
+14 Nonlinear |R| = [32m2.735618e-08[39m
+15 Nonlinear |R| = [32m1.518203e-08[39m
+16 Nonlinear |R| = [32m8.644837e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 60.48 s[39m] [[33m  233 MB[39m]
+
+Time Step 67, time = 2.36178e+06, dt = 129600
+ 0 Nonlinear |R| = [32m4.504280e-03[39m
+ 1 Nonlinear |R| = [32m2.951686e-03[39m
+ 2 Nonlinear |R| = [32m1.186276e-03[39m
+ 3 Nonlinear |R| = [32m4.362373e-04[39m
+ 4 Nonlinear |R| = [32m1.583126e-04[39m
+ 5 Nonlinear |R| = [32m5.758472e-05[39m
+ 6 Nonlinear |R| = [32m2.109319e-05[39m
+ 7 Nonlinear |R| = [32m7.825342e-06[39m
+ 8 Nonlinear |R| = [32m2.967895e-06[39m
+ 9 Nonlinear |R| = [32m1.167910e-06[39m
+10 Nonlinear |R| = [32m4.858940e-07[39m
+11 Nonlinear |R| = [32m2.170410e-07[39m
+12 Nonlinear |R| = [32m1.043548e-07[39m
+13 Nonlinear |R| = [32m5.341249e-08[39m
+14 Nonlinear |R| = [32m2.864509e-08[39m
+15 Nonlinear |R| = [32m1.588915e-08[39m
+16 Nonlinear |R| = [32m9.040030e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 60.99 s[39m] [[33m  233 MB[39m]
+
+Time Step 68, time = 2.49138e+06, dt = 129600
+ 0 Nonlinear |R| = [32m4.345710e-03[39m
+ 1 Nonlinear |R| = [32m2.937232e-03[39m
+ 2 Nonlinear |R| = [32m1.183651e-03[39m
+ 3 Nonlinear |R| = [32m4.355219e-04[39m
+ 4 Nonlinear |R| = [32m1.581340e-04[39m
+ 5 Nonlinear |R| = [32m5.756514e-05[39m
+ 6 Nonlinear |R| = [32m2.111344e-05[39m
+ 7 Nonlinear |R| = [32m7.849384e-06[39m
+ 8 Nonlinear |R| = [32m2.986924e-06[39m
+ 9 Nonlinear |R| = [32m1.181092e-06[39m
+10 Nonlinear |R| = [32m4.943431e-07[39m
+11 Nonlinear |R| = [32m2.221224e-07[39m
+12 Nonlinear |R| = [32m1.072554e-07[39m
+13 Nonlinear |R| = [32m5.501302e-08[39m
+14 Nonlinear |R| = [32m2.951596e-08[39m
+15 Nonlinear |R| = [32m1.636396e-08[39m
+16 Nonlinear |R| = [32m9.302276e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 57.55 s[39m] [[33m  234 MB[39m]
+
+Time Step 69, time = 2.62098e+06, dt = 129600
+ 0 Nonlinear |R| = [32m4.185950e-03[39m
+ 1 Nonlinear |R| = [32m2.871339e-03[39m
+ 2 Nonlinear |R| = [32m1.160037e-03[39m
+ 3 Nonlinear |R| = [32m4.270512e-04[39m
+ 4 Nonlinear |R| = [32m1.551423e-04[39m
+ 5 Nonlinear |R| = [32m5.652590e-05[39m
+ 6 Nonlinear |R| = [32m2.076322e-05[39m
+ 7 Nonlinear |R| = [32m7.738042e-06[39m
+ 8 Nonlinear |R| = [32m2.955902e-06[39m
+ 9 Nonlinear |R| = [32m1.175317e-06[39m
+10 Nonlinear |R| = [32m4.952709e-07[39m
+11 Nonlinear |R| = [32m2.239963e-07[39m
+12 Nonlinear |R| = [32m1.086662e-07[39m
+13 Nonlinear |R| = [32m5.586577e-08[39m
+14 Nonlinear |R| = [32m2.998899e-08[39m
+15 Nonlinear |R| = [32m1.661833e-08[39m
+16 Nonlinear |R| = [32m9.438833e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 57.88 s[39m] [[33m  234 MB[39m]
+
+Time Step 70, time = 2.75058e+06, dt = 129600
+ 0 Nonlinear |R| = [32m4.025850e-03[39m
+ 1 Nonlinear |R| = [32m2.760850e-03[39m
+ 2 Nonlinear |R| = [32m1.118103e-03[39m
+ 3 Nonlinear |R| = [32m4.118054e-04[39m
+ 4 Nonlinear |R| = [32m1.496922e-04[39m
+ 5 Nonlinear |R| = [32m5.459528e-05[39m
+ 6 Nonlinear |R| = [32m2.008891e-05[39m
+ 7 Nonlinear |R| = [32m7.508112e-06[39m
+ 8 Nonlinear |R| = [32m2.880911e-06[39m
+ 9 Nonlinear |R| = [32m1.152785e-06[39m
+10 Nonlinear |R| = [32m4.894788e-07[39m
+11 Nonlinear |R| = [32m2.229635e-07[39m
+12 Nonlinear |R| = [32m1.087095e-07[39m
+13 Nonlinear |R| = [32m5.602695e-08[39m
+14 Nonlinear |R| = [32m3.009303e-08[39m
+15 Nonlinear |R| = [32m1.666820e-08[39m
+16 Nonlinear |R| = [32m9.458865e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 57.85 s[39m] [[33m  235 MB[39m]
+
+Time Step 71, time = 2.88018e+06, dt = 129600
+ 0 Nonlinear |R| = [32m3.866613e-03[39m
+ 1 Nonlinear |R| = [32m2.613657e-03[39m
+ 2 Nonlinear |R| = [32m1.060974e-03[39m
+ 3 Nonlinear |R| = [32m3.909354e-04[39m
+ 4 Nonlinear |R| = [32m1.422008e-04[39m
+ 5 Nonlinear |R| = [32m5.192418e-05[39m
+ 6 Nonlinear |R| = [32m1.914516e-05[39m
+ 7 Nonlinear |R| = [32m7.179403e-06[39m
+ 8 Nonlinear |R| = [32m2.769142e-06[39m
+ 9 Nonlinear |R| = [32m1.116113e-06[39m
+10 Nonlinear |R| = [32m4.779282e-07[39m
+11 Nonlinear |R| = [32m2.193917e-07[39m
+12 Nonlinear |R| = [32m1.075385e-07[39m
+13 Nonlinear |R| = [32m5.556793e-08[39m
+14 Nonlinear |R| = [32m2.986483e-08[39m
+15 Nonlinear |R| = [32m1.653377e-08[39m
+16 Nonlinear |R| = [32m9.373884e-09[39m
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 56.52 s[39m] [[33m  235 MB[39m]
+
+Time Step 72, time = 3.00978e+06, dt = 129600
+ 0 Nonlinear |R| = [32m3.709612e-03[39m
+ 1 Nonlinear |R| = [32m2.438045e-03[39m
+ 2 Nonlinear |R| = [32m9.919633e-04[39m
+ 3 Nonlinear |R| = [32m3.656634e-04[39m
+ 4 Nonlinear |R| = [32m1.331109e-04[39m
+ 5 Nonlinear |R| = [32m4.867298e-05[39m
+ 6 Nonlinear |R| = [32m1.799005e-05[39m
+ 7 Nonlinear |R| = [32m6.772995e-06[39m
+slurmstepd: error: *** JOB 23110214 ON uc2n041 CANCELLED AT 2024-02-03T22:41:47 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 23110214.0 ON uc2n041 CANCELLED AT 2024-02-03T22:41:47 DUE TO TIME LIMIT ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 12328 RUNNING AT uc2n067
+=   EXIT CODE: 15
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+[proxy:0:0@uc2n041.localdomain] HYDU_sock_write (utils/sock/sock.c:254): write error (Broken pipe)
+[proxy:0:0@uc2n041.localdomain] main (pm/pmiserv/pmip.c:248): unable to return exit status upstream
+srun: error: uc2n041: task 0: Exited with exit code 5
+YOUR APPLICATION TERMINATED WITH THE EXIT STRING: Terminated (signal 15)
+This typically refers to a problem with your application.
+Please see the FAQ page for debugging suggestions
+
+============================= JOB FEEDBACK =============================
+
+NodeName=uc2n[041-042,066-067]
+Job ID: 23110214
+Cluster: uc2
+User/Group: qz9211/agw
+State: TIMEOUT (exit code 0)
+Nodes: 4
+Cores per node: 80
+CPU Utilized: 3-04:59:06
+CPU Efficiency: 47.90% of 6-16:42:40 core-walltime
+Job Wall-clock time: 00:30:08
+Memory Utilized: 13.95 GB (estimated maximum)
+Memory Efficiency: 3.97% of 351.56 GB (1.10 GB/core)

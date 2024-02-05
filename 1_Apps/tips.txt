@@ -1,0 +1,3 @@
+Please also add SimpleFluidProperties_new into fluid_properties module.
+
+SimpleFluidProperties_new only has a difference in dynamic viscosity compared to SimpleFluidProperties.

@@ -1,0 +1,1 @@
+Please note that the S0-S3 correspond to the slides' contents of 'Stability – CFL criteria on dt'

@@ -1,0 +1,42 @@
+[Tests]
+  [./Hydraulics_Gravity_Check]
+    type = 'Exodiff'
+    input = 'example_2_1.i'
+    exodiff = 'example_2_1_out.e'
+  [../]
+  [./Hydraulics_Friction_Check]
+    type = 'Exodiff'
+    input = 'example_2_2.i'
+    exodiff = 'example_2_2_out.e'
+  [../]
+  [./Hydraulics_Compressibillity_Check]
+    type = 'Exodiff'
+    input = 'example_2_3.i'
+    exodiff = 'example_2_3_out.e'
+  [../]
+  [./All_Kernel_Check]
+    type = 'Exodiff'
+    input = 'transient.i'
+    exodiff = 'transient_out.e'
+  [../]
+  [./Lateral_Heat_Ramey_Injection_Case]
+    type = 'Exodiff'
+    input = 'Ramey_1962.i'
+    exodiff = 'Ramey_1962_out.e'
+  [../]
+  [./Lateral_Heat_Ramey_Production_Case]
+    type = 'Exodiff'
+    input = 'Satman_production.i'
+    exodiff = 'Satman_production_out.e'
+  [../]
+  [./Lateral_Heat_Annulus_Conductivity]
+    type = 'Exodiff'
+    input = 'willhite_annulus.i'
+    exodiff = 'willhite_annulus_out.e'
+  [../]
+  [./Coaxial_Check]
+    type = 'CSVDiff'
+    input = 'coaxial.i'
+    csvdiff = 'coaxial_out.csv'
+  [../]
+[]
